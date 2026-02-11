@@ -1,0 +1,25 @@
+/* Custom styles that can't be done with Tailwind */
+
+.header-button {
+  background: transparent;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  transition:
+    opacity 0.3s ease,
+    transform 0.1s ease;
+  color: var(--foreground);
+}
+
+.header-button:hover {
+  opacity: 0.7;
+}
+
+.header-button:active {
+  transform: scale(0.95);
+}
+
+/* Light mode specific styles for header buttons */
+:root:not(.dark) .header-button {
+  color: #1f1f24;
+}

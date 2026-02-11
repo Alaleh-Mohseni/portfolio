@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('./assets/fonts/vazirmatnFontFace.css');
+
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    /* Light Mode Colors */
+    --background: #ffffff;
+    --foreground: #1f1f24;
+    --muted-foreground: #565662;
+    --accent: #6e4ef2;
+    --accent-gradient: linear-gradient(90deg, #6e4ef2 0%, #8c71ff 100%);
+    --surface: #edeaf8; /* Skills & Projects background */
+    --header-bg: #ffffff;
+
+    /* Typography */
+    --font-main: 'Inter', 'Vazirmatn', sans-serif;
+  }
+
+  /* Default Dark Mode */
+  :root,
+  .dark {
+    /* Dark Mode Colors */
+    --background: #1f1f24;
+    --foreground: #ffffff;
+    --muted-foreground: #8f8f92;
+    --surface: #272730;
+    --header-bg: #272730;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-main);
+    font-size: 16px;
+    @apply transition-colors duration-300;
+  }
+
+  /* Headings */
+  h1 {
+    @apply text-[64px] font-bold leading-tight;
+    color: var(--accent);
+  }
+
+  h2 {
+    @apply text-[54px] font-bold leading-tight;
+    color: var(--accent);
+  }
+
+  h3 {
+    @apply text-[32px] font-semibold;
+    color: var(--foreground);
+  }
+
+  h4 {
+    @apply text-[20px] font-medium;
+    color: var(--foreground);
+  }
+
+  h5 {
+    @apply text-[16px] font-medium;
+    color: var(--muted-foreground);
+  }
+
+  p {
+    @apply text-[16px] font-normal;
+    color: var(--muted-foreground);
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  /* List Items */
+  li {
+    @apply text-[18px] font-normal opacity-50;
+    color: var(--foreground);
+  }
+
+  li.active {
+    @apply font-medium opacity-100;
+  }
+
+  /* Button Styling */
+  button {
+    background: var(--accent-gradient);
+    @apply text-[16px] font-medium text-white flex items-center px-6 py-2 rounded-lg transition-transform active:scale-95;
+  }
+}
+
+@layer components {
+  .skills,
+  .projects {
+    background-color: var(--surface);
+    @apply transition-colors duration-300;
+  }
+
+  .header {
+    background-color: var(--header-bg);
+  }
+}
+
+/* Light Mode Override */
+:root:not(.dark) {
+  --background: #ffffff;
+  --foreground: #1f1f24;
+  --muted-foreground: #565662;
+  --surface: #edeaf8;
+  --header-bg: #ffffff;
+}
