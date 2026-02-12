@@ -87,12 +87,6 @@
   li.active {
     @apply font-medium opacity-100;
   }
-
-  /* Button Styling */
-  button {
-    background: var(--accent-gradient);
-    @apply text-[16px] font-medium text-white flex items-center px-6 py-2 rounded-lg transition-transform active:scale-95;
-  }
 }
 
 @layer components {
@@ -104,6 +98,12 @@
 
   .header {
     background-color: var(--header-bg);
+  }
+
+  /* Button Styling */
+  .cv-button {
+    background: var(--accent-gradient);
+    @apply text-[16px] font-medium text-white flex items-center px-6 py-2 rounded-lg transition-transform active:scale-95;
   }
 }
 

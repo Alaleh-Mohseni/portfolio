@@ -6,6 +6,7 @@ const portfolioData = {
             title: "Frontend Developer",
             description: "I'm a Frontend Developer with 3+ years of experience building modern, responsive web apps with React. I love using AI tools to move faster, solve problems smarter, and deliver clean, maintainable code. I'm comfortable with Node.js basics and enjoy working with teams to turn ideas into real products.",
             cvButton: "Download CV",
+            cvLink: "/resume/AlalehMohseni.pdf",
             currentWork: {
                 label: "Currently at",
                 company: "Karyar Studio"
@@ -105,6 +106,7 @@ const portfolioData = {
             title: "توسعه‌دهنده فرانت‌اند",
             description: "من یک توسعه‌دهنده فرانت‌اند با بیش از ۳ سال تجربه در ساخت اپلیکیشن‌های وب مدرن و ریسپانسیو با React هستم. از ابزارهای هوش مصنوعی برای کار سریع‌تر، حل مسائل هوشمندانه‌تر و تحویل کد تمیز و قابل نگهداری استفاده می‌کنم. با اصول Node.js آشنا هستم و از کار تیمی برای تبدیل ایده‌ها به محصولات واقعی لذت می‌برم.",
             cvButton: "دانلود رزومه",
+            cvLink: "/resume/آلاله_محسنی.pdf",
             currentWork: {
                 label: "در حال حاضر در",
                 company: "کاریار استودیو"

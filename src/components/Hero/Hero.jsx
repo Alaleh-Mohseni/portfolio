@@ -30,10 +30,14 @@ function Hero({ lang }) {
 
         {/* CV Button */}
         <div className="flex flex-wrap items-center gap-6">
-          <button className="hover:scale-105 transition-transform flex items-center gap-2 px-6 py-4 rounded-2xl">
+          <a
+            href={t.cvLink}
+            download
+            className="gap-2 px-6 py-4 rounded-2xl cv-button"
+          >
             <BsDownload className="text-lg" />
             {t.cvButton}
-          </button>
+          </a>
         </div>
 
         {/* Currently At */}
