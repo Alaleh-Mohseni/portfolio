@@ -14,7 +14,6 @@ const portfolioData = {
                 { name: "GitHub", url: "#", icon: "github" },
                 { name: "LinkedIn", url: "#", icon: "linkedin" },
                 { name: "Telegram", url: "#", icon: "telegram" },
-                { name: "Figma", url: "#", icon: "figma" },
                 { name: "Gmail", url: "#", icon: "gmail" }
             ]
         },

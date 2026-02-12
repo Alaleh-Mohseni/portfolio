@@ -1,0 +1,12 @@
+@keyframes flowerRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+.animate-flower {
+  animation: flowerRotate 4s ease-in-out infinite alternate;
+}

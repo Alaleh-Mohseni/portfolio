@@ -11,9 +11,8 @@ const translations = {
   },
 }
 
-function Header() {
+function Header({ language, setLanguage }) {
   const [isDark, setIsDark] = useState(true)
-  const [language, setLanguage] = useState('en')
 
   const toggleTheme = () => {
     setIsDark(!isDark)
