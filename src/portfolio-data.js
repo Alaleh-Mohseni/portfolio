@@ -11,10 +11,10 @@ const portfolioData = {
                 company: "Karyar Studio"
             },
             socialLinks: [
-                { name: "GitHub", url: "#", icon: "github" },
-                { name: "LinkedIn", url: "#", icon: "linkedin" },
-                { name: "Telegram", url: "#", icon: "telegram" },
-                { name: "Gmail", url: "#", icon: "gmail" }
+                { name: "GitHub", url: "https://github.com/Alaleh-Mohseni", icon: "github" },
+                { name: "LinkedIn", url: "https://www.linkedin.com/in/alaleh-mohseni", icon: "linkedin" },
+                { name: "Telegram", url: "https://t.me/alaleh_mohseni", icon: "telegram" },
+                { name: "Gmail", url: "mailto:alalamohseni@gmail.com", icon: "gmail" }
             ]
         },
 
@@ -110,11 +110,10 @@ const portfolioData = {
                 company: "کاریار استودیو"
             },
             socialLinks: [
-                { name: "گیت‌هاب", url: "#", icon: "github" },
-                { name: "لینکدین", url: "#", icon: "linkedin" },
-                { name: "تلگرام", url: "#", icon: "telegram" },
-                { name: "فیگما", url: "#", icon: "figma" },
-                { name: "جیمیل", url: "#", icon: "gmail" }
+                { name: "GitHub", url: "https://github.com/Alaleh-Mohseni", icon: "github" },
+                { name: "LinkedIn", url: "https://www.linkedin.com/in/alaleh-mohseni", icon: "linkedin" },
+                { name: "Telegram", url: "https://t.me/alaleh_mohseni", icon: "telegram" },
+                { name: "Gmail", url: "mailto:alalamohseni@gmail.com", icon: "gmail" }
             ]
         },
 
