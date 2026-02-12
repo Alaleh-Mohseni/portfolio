@@ -93,7 +93,7 @@
   .skills,
   .projects {
     background-color: var(--surface);
-    @apply transition-colors duration-300;
+    @apply transition-colors duration-300 px-[60px] py-[150px];
   }
 
   .header {

@@ -46,7 +46,7 @@ const portfolioData = {
                 { name: "Socket.io", icon: "socketio" },
                 { name: "BaseUI", icon: "baseui" },
                 { name: "Bootstrap", icon: "bootstrap" },
-                { name: "Trello", icon: "trello" }
+                { name: "Vite", icon: "vite" }
             ]
         },
 
@@ -146,7 +146,7 @@ const portfolioData = {
                 { name: "Socket.io", icon: "socketio" },
                 { name: "BaseUI", icon: "baseui" },
                 { name: "Bootstrap", icon: "bootstrap" },
-                { name: "Trello", icon: "trello" }
+                { name: "Vite", icon: "vite" }
             ]
         },
 
