@@ -1,6 +1,5 @@
 import { BsGithub, BsTelegram, BsEnvelope, BsDownload } from 'react-icons/bs'
 import { FaLinkedinIn } from 'react-icons/fa'
-import portfolioData from '../../portfolio-data'
 import Flower from '../../assets/decorate.png'
 import ProfilePhoto from '../../assets/profile-photo.png'
 import CompanyLogo from '../../assets/Karyar-Studio-Logo.svg'
@@ -14,7 +13,7 @@ const iconMap = {
   gmail: <BsEnvelope />,
 }
 
-function Hero({ lang }) {
+function Hero({ lang, portfolioData }) {
   const t = portfolioData[lang].hero
 
   return (

@@ -1,6 +1,6 @@
-import portfolioData from '../../portfolio-data'
+import './Skills.css'
 
-function Skills({ lang = 'en' }) {
+function Skills({ lang, portfolioData }) {
   const skillsData = portfolioData[lang].skills
 
   return (
@@ -23,10 +23,10 @@ function Skills({ lang = 'en' }) {
                 <img
                   src={skill.icon}
                   alt={skill.name}
-                  className="w-full h-full object-contain drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]"
+                  className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-lg font-base text-white text-center tracking-wide">
+              <span className="text-lg font-base text-white text-center tracking-wide skill-name">
                 {skill.name}
               </span>
             </div>
