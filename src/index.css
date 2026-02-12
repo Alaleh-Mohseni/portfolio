@@ -93,7 +93,11 @@
   .skills,
   .projects {
     background-color: var(--surface);
-    @apply transition-colors duration-300 px-[60px] py-[150px];
+    @apply transition-colors duration-300 px-4 md:px-[60px] py-[150px];
+  }
+
+  .experience {
+    @apply px-4 md:px-[60px] py-[150px];
   }
 
   .header {

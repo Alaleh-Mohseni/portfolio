@@ -1,0 +1,77 @@
+.experience-card {
+  background-color: #24242d;
+  border-color: #5e5e63;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.decorate {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../../assets/background.png');
+  filter: invert(100%);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Light Mode Card Styles */
+:root:not(.dark) .experience-card {
+  background-color: #edeaf8;
+  border-color: #dfdfea;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+:root:not(.dark) .experience-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+:root:not(.dark) .decorate {
+  filter: invert(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience {
+    padding: 80px 24px;
+  }
+
+  .experience-card {
+    padding: 32px 24px !important;
+    gap: 24px !important;
+  }
+
+  .experience h2 {
+    font-size: 40px;
+    margin-bottom: 48px;
+  }
+
+  .experience-card .flex.items-start {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 60px 16px;
+  }
+
+  .experience-card {
+    padding: 24px 16px !important;
+    gap: 20px !important;
+  }
+
+  .experience h2 {
+    font-size: 32px;
+  }
+}
