@@ -2,7 +2,6 @@ import './Skills.css'
 
 function Skills({ lang, portfolioData }) {
   const skillsData = portfolioData[lang].skills
-
   return (
     <section className="w-full min-h-screen flex items-center justify-center skills">
       <div className="w-full mx-auto flex flex-col items-center gap-12">
@@ -11,9 +10,8 @@ function Skills({ lang, portfolioData }) {
           <h2>{skillsData.title}</h2>
           <p className="text-lg">{skillsData.subtitle}</p>
         </div>
-
         {/* Skills Grid */}
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-y-10 gap-x-8 mt-15 w-full">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-y-10 gap-x-8 mt-15 w-full">
           {skillsData.items.map((skill, index) => (
             <div
               key={index}

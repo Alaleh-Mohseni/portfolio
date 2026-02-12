@@ -9,7 +9,9 @@ const portfolioData = {
             cvLink: "/resume/AlalehMohseni.pdf",
             currentWork: {
                 label: "Currently at",
-                company: "Karyar Studio"
+                company: "Karyar Studio",
+                companyLogo: "/Karyar-Studio-Logo.svg",
+                companyLink: "https://www.linkedin.com/company/karyar-studio/",
             },
             socialLinks: [
                 { name: "GitHub", url: "https://github.com/Alaleh-Mohseni", icon: "github" },
@@ -83,7 +85,8 @@ const portfolioData = {
             items: [
                 {
                     company: "Karyar Studio",
-                    logo: "/path/to/karyar-logo.png",
+                    logo: "/Karyar-Studio-Logo.svg",
+                    companyLink: "https://www.linkedin.com/company/karyar-studio/",
                     position: "Frontend Developer",
                     period: "Oct 2023 - Present",
                     achievements: [
@@ -109,7 +112,9 @@ const portfolioData = {
             cvLink: "/resume/آلاله_محسنی.pdf",
             currentWork: {
                 label: "در حال حاضر در",
-                company: "کاریار استودیو"
+                company: "کاریار استودیو",
+                companyLogo: "/Karyar-Studio-Logo.svg",
+                companyLink: "https://www.linkedin.com/company/karyar-studio/"
             },
             socialLinks: [
                 { name: "GitHub", url: "https://github.com/Alaleh-Mohseni", icon: "github" },
@@ -183,7 +188,8 @@ const portfolioData = {
             items: [
                 {
                     company: "کاریار استودیو",
-                    logo: "/path/to/karyar-logo.png",
+                    logo: "/Karyar-Studio-Logo.svg",
+                    companyLink: "https://www.linkedin.com/company/karyar-studio/",
                     position: "توسعه‌دهنده فرانت‌اند",
                     period: "مهر ۱۴۰۲ - اکنون",
                     achievements: [

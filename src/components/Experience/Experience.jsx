@@ -1,4 +1,3 @@
-import CompanyLogo from '../../assets/Karyar-Studio-Logo.svg'
 import './Experience.css'
 
 function Experience({ lang, portfolioData }) {
@@ -22,13 +21,20 @@ function Experience({ lang, portfolioData }) {
               <div className="flex items-start gap-4 md:items-center">
                 {item.logo && (
                   <img
-                    src={CompanyLogo}
+                    src={item.logo}
                     alt={`${item.company} logo`}
                     className="w-16 h-16 object-contain flex-shrink-0"
                   />
                 )}
                 <div className="flex-1">
-                  <h5 className="mb-1 text-[var(--accent)]">{item.company}</h5>
+                  <a
+                    href={item.companyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mb-1 hover:underline transition-all inline-block"
+                  >
+                    <h5 className="text-[var(--accent)]">{item.company}</h5>
+                  </a>
                   <h4 className="mb-2">{item.position}</h4>
                   <span className="text-[14px] font-normal text-[var(--muted-foreground)] opacity-70">
                     {item.period}

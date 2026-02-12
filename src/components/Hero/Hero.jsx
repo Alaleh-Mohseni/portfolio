@@ -2,7 +2,6 @@ import { BsGithub, BsTelegram, BsEnvelope, BsDownload } from 'react-icons/bs'
 import { FaLinkedinIn } from 'react-icons/fa'
 import Flower from '../../assets/decorate.png'
 import ProfilePhoto from '../../assets/profile-photo.png'
-import CompanyLogo from '../../assets/Karyar-Studio-Logo.svg'
 
 import './Hero.css'
 
@@ -42,16 +41,21 @@ function Hero({ lang, portfolioData }) {
         {/* Currently At */}
         <div className="flex items-center gap-2">
           <img
-            src={CompanyLogo}
+            src={t.currentWork.companyLogo}
             alt="Company Logo"
             className="w-8 h-8 object-contain"
           />
           <span className="text-base font-medium text-[var(--foreground)] opacity-80">
             {t.currentWork.label}
           </span>
-          <span className="text-base font-medium text-[var(--accent)]">
+          <a
+            href={t.currentWork.companyLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-base font-medium text-[var(--accent)] hover:underline transition-all"
+          >
             {t.currentWork.company}
-          </span>
+          </a>
         </div>
 
         {/* Social Links */}
