@@ -1,0 +1,95 @@
+.filter-button {
+  height: 44px;
+  min-width: 136px;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 12px;
+  border: none;
+  background-color: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  opacity: 0.8;
+}
+
+.filter-button.active {
+  background: linear-gradient(90deg, #6e4ef2 0%, #8c71ff 100%);
+  color: #ffffff;
+}
+
+.project-card {
+  background-color: #1f1f24;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-image-wrapper {
+  width: 100%;
+  height: 310px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.project-info h3 {
+  font-size: 32px;
+}
+
+.project-info p {
+  font-size: 16px;
+}
+
+.tech-badge {
+  padding: 6px 12px;
+  background-color: rgba(110, 78, 242, 0.1);
+  color: var(--accent);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Light Mode */
+:root:not(.dark) .project-card {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-image-wrapper {
+    height: 280px;
+  }
+
+  .project-card {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .project-info h3 {
+    font-size: 24px;
+  }
+
+  .filter-button {
+    min-width: auto;
+    padding: 0 16px;
+    font-size: 14px;
+  }
+}

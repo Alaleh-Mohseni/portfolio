@@ -64,7 +64,7 @@ const portfolioData = {
                     description: "Performance Management Dashboard",
                     category: "Dashboard",
                     technologies: ["React", "TypeScript", "Ant Design", "Recharts", "Express.js", "MongoDB"],
-                    image: "/path/to/akeep.png",
+                    image: "/projects/aKeep.png",
                     link: "#"
                 },
                 {
@@ -73,9 +73,90 @@ const portfolioData = {
                     description: "Logistics Dashboard",
                     category: "Dashboard",
                     technologies: ["React", "Node.js", "MongoDB", "Ant Design", "Recharts", "ClickHouse"],
-                    image: "/path/to/sampars.png",
+                    image: "/projects/sampars.png",
                     link: "#"
-                }
+                },
+                {
+                    id: 3,
+                    title: "Karyar Digital",
+                    description: "Profile Management Dashboard & Course Registration System",
+                    category: "Dashboard",
+                    technologies: ["React", "TypeScript", "Ant Design", "Node.js", "MongoDB"],
+                    image: "/projects/karyar-digital.png",
+                    link: "#"
+                },
+                {
+                    id: 4,
+                    title: "Divar",
+                    description: "Province Guessing Game",
+                    category: "Web Design",
+                    technologies: ["React", "TypeScript", "CSS3"],
+                    image: "/projects/divar-desktop.png",
+                    link: "#"
+                },
+                {
+                    id: 5,
+                    title: "Nexis",
+                    description: "Hub Management Dashboard & Mobile Web App",
+                    category: "Dashboard",
+                    technologies: ["React", "TypeScript", "Ant Design", "Node.js"],
+                    image: "/projects/nexis.png",
+                    link: "#"
+                },
+                {
+                    id: 6,
+                    title: "Karyar Studio",
+                    description: "Business Landing Page",
+                    category: "Web Design",
+                    technologies: ["React", "Tailwindcss", "TypeScript"],
+                    image: "/projects/karyar-studio.png",
+                    link: "#"
+                },
+                {
+                    id: 7,
+                    title: "Ta Code",
+                    description: "Digikala Landing Page",
+                    category: "Web Design",
+                    technologies: ["React", "TypeScript", "Tailwindcss"],
+                    image: "/projects/ta-code.png",
+                    link: "#"
+                },
+                {
+                    id: 8,
+                    title: "Resume Builder",
+                    description: "Bilingual Resume Builder Dashboard (English & Persian)",
+                    category: "Dashboard",
+                    technologies: ["React", "TypeScript", "Ant Design", "Node.js"],
+                    image: "/projects/resume-builder.png",
+                    link: "#"
+                },
+                {
+                    id: 9,
+                    title: "Digikala",
+                    description: "Dynamic Presentation Generator Dashboard",
+                    category: "Dashboard",
+                    technologies: ["React", "TypeScript", "Ant Design"],
+                    image: "/projects/presentation.jpg",
+                    link: "#"
+                },
+                {
+                    id: 10,
+                    title: "Cryptocurrency",
+                    description: "Cryptocurrency Dashboard",
+                    category: "Dashboard",
+                    technologies: ["React", "TypeScript", "Recharts", "Tailwindcss"],
+                    image: "/projects/cryptocurrency.png",
+                    link: "#"
+                },
+                {
+                    id: 11,
+                    title: "The Movie Box",
+                    description: "Movie Website",
+                    category: "Web Design",
+                    technologies: ["React", "TypeScript", "Tailwindcss"],
+                    image: "/projects/film.png",
+                    link: "#"
+                },
             ]
         },
 
@@ -163,20 +244,101 @@ const portfolioData = {
             items: [
                 {
                     id: 1,
-                    title: "آکیپ",
+                    title: "اکیپ",
                     description: "داشبورد مدیریت عملکرد",
                     category: "Dashboard",
                     technologies: ["React", "TypeScript", "Ant Design", "Recharts", "Express.js", "MongoDB"],
-                    image: "/path/to/akeep.png",
+                    image: "/projects/aKeep.png",
                     link: "#"
                 },
                 {
                     id: 2,
-                    title: "سمپارس",
+                    title: "سام پارس",
                     description: "داشبورد لجستیک",
                     category: "Dashboard",
                     technologies: ["React", "Node.js", "MongoDB", "Ant Design", "Recharts", "ClickHouse"],
-                    image: "/path/to/sampars.png",
+                    image: "/projects/sampars.png",
+                    link: "#"
+                },
+                {
+                    id: 3,
+                    title: "کاریار دیجیتال",
+                    description: "داشبورد مدیریت پروفایل و سیستم ثبت‌نام دوره",
+                    category: "Dashboard",
+                    technologies: ["React", "TypeScript", "Ant Design", "Node.js", "MongoDB"],
+                    image: "/projects/karyar-digital.png",
+                    link: "#"
+                },
+                {
+                    id: 4,
+                    title: "دیوار",
+                    description: "بازی حدس استان",
+                    category: "Web Design",
+                    technologies: ["React", "TypeScript", "CSS3"],
+                    image: "/projects/divar.png",
+                    link: "#"
+                },
+                {
+                    id: 5,
+                    title: "نکسیس",
+                    description: "داشبورد مدیریت هاب و اپلیکیشن وب موبایل",
+                    category: "Dashboard",
+                    technologies: ["React", "TypeScript", "Ant Design", "Node.js"],
+                    image: "/projects/nexis.png",
+                    link: "#"
+                },
+                {
+                    id: 6,
+                    title: "کاریار استودیو",
+                    description: "صفحه فرود کسب‌وکار",
+                    category: "Web Design",
+                    technologies: ["React", "Tailwindcss", "TypeScript"],
+                    image: "/projects/karyar-studio.png",
+                    link: "#"
+                },
+                {
+                    id: 7,
+                    title: "تا کد",
+                    description: "دیجی‌کالا",
+                    category: "Web Design",
+                    technologies: ["React", "TypeScript", "Tailwindcss"],
+                    image: "/projects/ta-code.png",
+                    link: "#"
+                },
+                {
+                    id: 8,
+                    title: "سازنده رزومه",
+                    description: "داشبورد دوزبانه سازنده رزومه (انگلیسی و فارسی)",
+                    category: "Dashboard",
+                    technologies: ["React", "TypeScript", "Ant Design", "Node.js"],
+                    image: "/projects/resume-builder.png",
+                    link: "#"
+                },
+                {
+                    id: 9,
+                    title: "دیجی‌کالا",
+                    description: "داشبورد ساخت پرزنتیشن داینامیک",
+                    category: "Dashboard",
+                    technologies: ["React", "TypeScript", "Ant Design"],
+                    image: "/projects/digikala.png",
+                    link: "#"
+                },
+                {
+                    id: 10,
+                    title: "ارز دیجیتال",
+                    description: "داشبورد ارزهای دیجیتال",
+                    category: "Dashboard",
+                    technologies: ["React", "TypeScript", "Recharts", "Tailwindcss"],
+                    image: "/projects/cryptocurrency.png",
+                    link: "#"
+                },
+                {
+                    id: 11,
+                    title: "جعبه فیلم",
+                    description: "وب‌سایت فیلم",
+                    category: "Web Design",
+                    technologies: ["React", "TypeScript", "Tailwindcss"],
+                    image: "/projects/movie-box.png",
                     link: "#"
                 }
             ]
