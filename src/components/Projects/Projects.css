@@ -1,0 +1,238 @@
+.filter-button {
+  height: 40px;
+  min-width: 120px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 1.5px solid transparent;
+  background-color: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filter-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.filter-button.active {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.project-card {
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  background-color: var(--background);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.project-image-wrapper {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.35s ease;
+}
+
+.project-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(110, 78, 242, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.preview-hint {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 6px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.project-image-wrapper:hover .project-image {
+  transform: scale(1.06);
+}
+
+.project-image-wrapper:hover .project-image-overlay {
+  opacity: 1;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  /* Dark mode */
+  background: #e9e3ff;
+  color: var(--accent);
+}
+
+:root:not(.dark) .tech-badge {
+  background-color: rgba(110, 78, 242, 0.08);
+  color: #5a35d4;
+  border: 1px solid rgba(110, 78, 242, 0.15);
+}
+
+:root:not(.dark) .project-card {
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+:root:not(.dark) .project-card:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+:root:not(.dark) .project-image-wrapper {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+.preview-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 40px;
+  animation: fadeIn 0.25s ease;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.preview-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  animation: zoomIn 0.25s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.close-button:hover {
+  transform: rotate(90deg);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 1px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .project-image-wrapper {
+    height: 220px;
+  }
+
+  .project-card {
+    padding: 14px;
+    gap: 14px;
+  }
+
+  .filter-button {
+    min-width: auto;
+    padding: 0 14px;
+    font-size: 13px;
+    height: 36px;
+  }
+
+  .preview-modal {
+    padding: 16px;
+  }
+
+  .preview-content {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .close-button {
+    top: 12px;
+    right: 12px;
+  }
+
+  .preview-image {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+}
