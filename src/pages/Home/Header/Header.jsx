@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BsGlobe, BsSun, BsMoon } from 'react-icons/bs'
-import useThrottle from '../../hooks/useThrottle'
+import useThrottle from '../../../hooks/useThrottle'
 import './Header.css'
 
 const navLinks = [
@@ -109,14 +109,16 @@ function Header({ language, setLanguage }) {
         </ul>
       </nav>
 
-      <div className="header__controls flex items-center gap-4">
+      <div className="header__controls flex justify-center gap-2">
         <button
           onClick={toggleLanguage}
-          className="header-button flex items-center gap-2"
+          className="header-button flex justify-center gap-2"
           aria-label="Toggle language"
         >
           <BsGlobe className="text-xl" />
-          <span className="text-base font-medium uppercase">{language}</span>
+          <span className="text-base font-medium uppercase language">
+            {language}
+          </span>
         </button>
 
         <button

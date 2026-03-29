@@ -6,7 +6,7 @@ import {
   BsArrowUpRightCircleFill,
   BsArrowUpLeftCircleFill,
 } from 'react-icons/bs'
-import Link from '../Link/Link'
+import Link from '../../../components/Link/Link'
 import './Projects.css'
 
 function Projects({ lang, portfolioData }) {

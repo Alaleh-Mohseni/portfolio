@@ -1,4 +1,4 @@
-import Link from '../Link/Link'
+import Link from '../../../components/Link/Link'
 import './Experience.css'
 
 function Experience({ lang, portfolioData }) {

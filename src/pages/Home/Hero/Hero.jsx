@@ -1,8 +1,8 @@
 import { BsDownload } from 'react-icons/bs'
-import Flower from '../../assets/decorate.png'
-import ProfilePhoto from '../../assets/profile-photo.png'
-import SocialLinks from '../SocialLinks/SocialLinks'
-import Link from '../Link/Link'
+import Flower from '../../../assets/decorate.png'
+import ProfilePhoto from '../../../assets/profile-photo.png'
+import SocialLinks from '../../../components/SocialLinks/SocialLinks'
+import Link from '../../../components/Link/Link'
 import './Hero.css'
 
 function Hero({ lang, portfolioData }) {
