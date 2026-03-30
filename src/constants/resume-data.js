@@ -121,8 +121,8 @@ export const resumeData = {
         languages: ["Persian", "English"],
         activities: {
             company: "Kaaryar",
-            company_link: "https://www.linkedin.com/company/karyar-studio/",
-            role: "Teacher Assistant",
+            company_link: "https://kaaryar.ir/",
+            role: "Teacher Assistant and Mentor",
             period: "Oct 2023 - Present",
             description: "I volunteered for Kaaryar courses as a mentor and teaching assistant. Kaaryar aims to empower individuals with limited access to teaching materials and technology by providing them with the necessary resources to enhance their education and career prospects."
         }

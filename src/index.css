@@ -15,11 +15,26 @@
     --header-bg: #ffffff;
     --active-link: var(--accent);
 
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+
+    --mb-0-25: 0.25rem;
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --header-height: 3rem;
+
     /* Typography */
     --font-main: 'Inter', 'Vazirmatn', sans-serif;
 
+    /* Scrollbar */
     --scrollbar-track: #ffffff;
     --scrollbar-thumb: #bcbcbe;
+
+    /* Print */
+    --print-bg: #ffffff;
+    --print-font-size: 0.85rem;
   }
 
   /* Default Dark Mode */
@@ -116,6 +131,25 @@
     @apply sticky top-0 z-50 backdrop-blur-md;
   }
 
+  .resume h2 {
+    border-bottom: 1px solid #cccccc;
+    color: var(--accent);
+    font-size: var(--h2-font-size);
+  }
+
+  .section h3 {
+    color: var(--foreground);
+    font-size: var(--h3-font-size);
+  }
+
+  .card {
+    background-color: var(--surface);
+  }
+
+  .main {
+    font-family: var(--font-main);
+  }
+
   /* Mobile header controls animation */
   @media (max-width: 767px) {
     .header--hidden .header__controls {
@@ -135,6 +169,13 @@
   .cv-button {
     background: var(--accent-gradient);
     @apply text-[16px] font-medium text-white flex items-center px-6 py-2 rounded-lg transition-transform active:scale-95;
+  }
+
+  @media print {
+    li {
+      color: #565662 !important;
+      font-size: 10px !important;
+    }
   }
 }
 

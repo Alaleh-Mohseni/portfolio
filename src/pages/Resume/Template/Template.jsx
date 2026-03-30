@@ -1,8 +1,7 @@
 import { resumeData } from '../../../constants/resume-data'
-import styles from './TemplateThree.module.css'
 import './Template.css'
 
-function TemplateThree() {
+function Template() {
   const {
     profile,
     skills,
@@ -14,24 +13,24 @@ function TemplateThree() {
   } = resumeData.en
 
   return (
-    <div className="flex flex-col resume">
+    <div className="flex flex-col gap-5 resume">
       {profile && (
-        <div className={styles.header}>
-          <div className="flex flex-col justify-center items-center overview">
-            <div className="flex justify-center items-center">
-              <h1 className={styles.name}>{profile.name}</h1>|
-              <p className={styles.job_title}>{profile.job_title}</p>
+        <div className="w-full p-6">
+          <div className="flex flex-col justify-center items-center gap-2 profile">
+            <div className="flex justify-center items-center gap-2">
+              <h1 className="text-2xl">{profile.name}</h1>|
+              <p className="capitalize font-medium">{profile.job_title}</p>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center gap-2">
               {profile.mobile && (
                 <a href={`tel:${profile.mobile}`}>{profile.mobile}</a>
               )}
               {profile.mobile && profile.province && '|'}
               {profile.province && (
-                <p className={styles.text}>{profile.province}</p>
+                <p className="capitalize">{profile.province}</p>
               )}
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center gap-2">
               {profile.social_links.map((item) => (
                 <>
                   <a
@@ -53,24 +52,24 @@ function TemplateThree() {
         </div>
       )}
 
-      <div className={styles.content}>
-        <div className="flex flex-col resume">
+      <div className="py-0 px-12 mb-12 detail-content">
+        <div className="flex flex-col gap-3 resume">
           {profile.about && (
-            <div className="flex flex-col section">
+            <div className="flex flex-col gap-2 section">
               <h2>About</h2>
               <p>{profile.about}</p>
             </div>
           )}
 
           {skills && (
-            <div className="flex flex-col section">
+            <div className="flex flex-col gap-2 section">
               <h2>Skills</h2>
-              <div className="flex flex-col skill">
-                <div className="flex items-center">
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-1">
                   <h3>Technical Skills:</h3>
-                  <p className={styles.text}>{skills.technical.join(', ')}</p>
+                  <p className="capitalize">{skills.technical.join(', ')}</p>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center gap-1">
                   <h3>Familiar With:</h3>
                   <p>{skills.familiar.join(', ')}</p>
                 </div>
@@ -78,19 +77,19 @@ function TemplateThree() {
             </div>
           )}
 
-          <div className="flex flex-col section">
+          <div className="flex flex-col gap-2 section">
             <h2>Experience</h2>
             {experience.items.map((exp, index) => (
               <div key={exp._id || index}>
-                <div className="flex justify-between items-center work-experience">
-                  <div className="flex items-center">
-                    <h3 className={styles.text}>{exp.position}</h3>
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-1">
+                    <h3 className="capitalize">{exp.position}</h3>
                     {exp.company_name && (
                       <>
                         |{' '}
                         {exp.company_link ? (
                           <a
-                            className={styles.text}
+                            className="capitalize"
                             href={exp.company_link}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -98,9 +97,7 @@ function TemplateThree() {
                             {exp.company_name}
                           </a>
                         ) : (
-                          <span className={styles.text}>
-                            {exp.company_name}
-                          </span>
+                          <span className="capitalize">{exp.company_name}</span>
                         )}
                       </>
                     )}
@@ -109,9 +106,9 @@ function TemplateThree() {
                 </div>
                 <p>{exp.about_company}</p>
                 {exp.achievements && (
-                  <ul className={styles.list}>
+                  <ul>
                     {exp.achievements.map((item) => (
-                      <li>{item}</li>
+                      <li className="text-[var(--muted-foreground)]">{item}</li>
                     ))}
                   </ul>
                 )}
@@ -119,16 +116,16 @@ function TemplateThree() {
             ))}
           </div>
 
-          <div className="flex flex-col section">
+          <div className="flex flex-col gap-2 section">
             <h2>Projects</h2>
             {projects.items.map((project, index) => (
               <div key={index}>
-                <div className="flex items-center project">
-                  <h3 className={styles.text}>{project.title}</h3>
+                <div className="flex items-center gap-1">
+                  <h3 className="capitalize">{project.title}</h3>
                   {project.technologies?.length > 0 && (
                     <>
                       |
-                      <p className={styles.text}>
+                      <p className="capitalize">
                         {project.technologies.join(', ')}
                       </p>
                     </>
@@ -148,9 +145,9 @@ function TemplateThree() {
                 </div>
                 <p>{project.description}</p>
                 {project.topics && (
-                  <ul className={styles.list}>
+                  <ul>
                     {project.topics.map((item) => (
-                      <li>{item}</li>
+                      <li className="text-[var(--muted-foreground)]">{item}</li>
                     ))}
                   </ul>
                 )}
@@ -158,15 +155,15 @@ function TemplateThree() {
             ))}
           </div>
 
-          <div className="flex flex-col section">
+          <div className="flex flex-col gap-2 section">
             <h2>Education</h2>
-            <div className="flex justify-between items-center education">
-              <div className="flex items-center">
-                <h3 className={styles.text}>
+            <div className="flex justify-between items-center">
+              <div className="flex items-center gap-1">
+                <h3>
                   {education.degree} of {education.study_field}
                 </h3>
                 |{' '}
-                <p className={styles.text}>
+                <p>
                   {education.university} of {education.city}
                 </p>
               </div>
@@ -174,9 +171,9 @@ function TemplateThree() {
           </div>
 
           {languages && (
-            <div className="flex flex-col section">
+            <div className="flex flex-col gap-2 section">
               <h2>Languages</h2>
-              <div className="flex flex-col languages">
+              <div className="flex flex-col gap-1">
                 {languages?.length > 0 && (
                   <p>{languages.map((lang) => lang).join(', ')}</p>
                 )}
@@ -184,25 +181,25 @@ function TemplateThree() {
             </div>
           )}
 
-          {activities && (
-            <div className="flex flex-col section">
+          {/* {activities && (
+            <div className="flex flex-col gap-2 section">
               <h2>Extra-Curricular Activities</h2>
               <p>{activities.description}</p>
             </div>
-          )}
+          )} */}
 
           {activities && (
-            <div className="flex flex-col section">
+            <div className="flex flex-col gap-2 section">
               <h2>Extra-Curricular Activities</h2>
-              <div className="flex flex-col activities">
-                <div className="flex items-center">
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-1">
                   {activities.role && (
-                    <h3 className={styles.text}>{activities.role}</h3>
+                    <h3 className="capitalize">{activities.role}</h3>
                   )}
                   {activities.company && activities.role && <span>|</span>}
                   {activities.company_link && activities.company ? (
                     <a
-                      className={styles.text}
+                      className="capitalize"
                       href={activities.company_link}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -211,7 +208,7 @@ function TemplateThree() {
                     </a>
                   ) : (
                     activities.company && (
-                      <p className={styles.text}>{activities.company}</p>
+                      <p className="capitalize">{activities.company}</p>
                     )
                   )}
                 </div>
@@ -225,4 +222,4 @@ function TemplateThree() {
   )
 }
 
-export default TemplateThree
+export default Template
