@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { GrClose } from 'react-icons/gr'
 import {
   BsArrowUpRightCircle,
@@ -6,18 +6,23 @@ import {
   BsArrowUpRightCircleFill,
   BsArrowUpLeftCircleFill,
 } from 'react-icons/bs'
+import { LanguageContext } from '../../../contexts/LanguageContext'
+import portfolioData from '../../../constants/portfolio-data'
 import Link from '../../../components/Link/Link'
 import './Projects.css'
 
-function Projects({ lang, portfolioData }) {
-  const data = portfolioData[lang].projects
-  const [activeCategory, setActiveCategory] = useState('All Projects')
+function Projects() {
+  const { language } = useContext(LanguageContext)
+  const data = portfolioData[language].projects
+  const [activeCategory, setActiveCategory] = useState('all')
   const [previewImage, setPreviewImage] = useState(null)
 
   const filteredProjects =
-    activeCategory === 'All Projects' || activeCategory === 'همه پروژه‌ها'
+    activeCategory === 'all'
       ? data.items
-      : data.items.filter((project) => project.category === 'Dashboard')
+      : data.items.filter((project) =>
+          project.category.includes(activeCategory)
+        )
 
   return (
     <section className="projects" id="projects">
@@ -32,11 +37,11 @@ function Projects({ lang, portfolioData }) {
         <div className="flex flex-wrap items-center justify-start gap-3 mb-16">
           {data.categories.map((category) => (
             <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`filter-button ${activeCategory === category ? 'active' : ''}`}
+              key={category.key}
+              onClick={() => setActiveCategory(category.key)}
+              className={`filter-button ${activeCategory === category.key ? 'active' : ''}`}
             >
-              {category}
+              {category.label}
             </button>
           ))}
         </div>
@@ -57,7 +62,7 @@ function Projects({ lang, portfolioData }) {
                 />
                 <div className="project-image-overlay">
                   <span className="preview-hint">
-                    {lang === 'fa' ? 'مشاهده تصویر' : 'Click to preview'}
+                    {language === 'fa' ? 'مشاهده تصویر' : 'Click to preview'}
                   </span>
                 </div>
               </div>
@@ -73,7 +78,7 @@ function Projects({ lang, portfolioData }) {
                       onClick={(e) => e.stopPropagation()}
                       className="text-primary hover:opacity-70 transition-opacity group"
                     >
-                      {lang === 'fa' ? (
+                      {language === 'fa' ? (
                         <>
                           <BsArrowUpLeftCircle className="text-xl group-hover:hidden" />
                           <BsArrowUpLeftCircleFill className="text-xl hidden group-hover:block text-[var(--accent)]" />

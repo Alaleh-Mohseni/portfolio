@@ -10,7 +10,6 @@ export const resumeData = {
             social_links: [
                 { name: "GitHub", url: "https://github.com/Alaleh-Mohseni", icon: "github" },
                 { name: "LinkedIn", url: "https://www.linkedin.com/in/alaleh-mohseni", icon: "linkedin" },
-                // { name: "Telegram", url: "https://t.me/alaleh_mohseni", icon: "telegram" },
                 { name: "Gmail", url: "alalamohseni@gmail.com", icon: "gmail" }
             ],
         },
@@ -127,5 +126,130 @@ export const resumeData = {
             description: "I volunteered for Kaaryar courses as a mentor and teaching assistant. Kaaryar aims to empower individuals with limited access to teaching materials and technology by providing them with the necessary resources to enhance their education and career prospects."
         }
     },
-    fa: {},
+    fa: {
+        profile: {
+            name: 'آلاله محسنی',
+            job_title: 'Frontend Developer',
+            about: 'توسعه‌دهنده فرانت‌اند با بیش از ۳ سال تجربه در توسعه وب‌اپلیکیشن‌های ریسپانسیو و کاربرمحور با React. دارای رویکرد AI-first و استفاده مؤثر از ابزارهای مبتنی بر هوش مصنوعی برای افزایش بهره‌وری توسعه، همراه با تمرکز بر کیفیت کد و بهینه‌سازی عملکرد. آشنا با مفاهیم پایه بک‌اند با Node.js. فردی مسئولیت‌پذیر، یادگیرنده و علاقه‌مند به رشد در تیم‌های حرفه‌ای و پروژه‌های واقعی.',
+            mobile: '۰۹۳۶۱۰۴۴۳۷۱',
+            city: 'سمنان',
+            province: 'سمنان',
+            social_links: [
+                { name: "GitHub", url: "https://github.com/Alaleh-Mohseni", icon: "github" },
+                { name: "LinkedIn", url: "https://www.linkedin.com/in/alaleh-mohseni", icon: "linkedin" },
+                { name: "Gmail", url: "alalamohseni@gmail.com", icon: "gmail" }
+            ],
+        },
+        skills: {
+            technical: ["HTML", "CSS", "Javascript", "SASS", "React.js", "Ant Design", "Tailwind CSS", "Bootstrap", "Figma", "Git"],
+            familiar: ["Next.js", "Typescript", "Node.js", "Vitest", "Docker", "MongoDB"],
+        },
+        experience: {
+            items: [
+                {
+                    company_name: "کاریار استودیو",
+                    company_link: "https://www.linkedin.com/company/karyar-studio/",
+                    position: "توسعه‌دهنده فرانت‌اند",
+                    about_company: "کاریار استودیو در زمینه طراحی و توسعه وب‌سایت و محصولات دیجیتال فعالیت می‌کند.",
+                    period: "مهر ۱۴۰۲ - تاکنون",
+                    achievements: [
+                        "بهینه‌سازی عملکرد پنل ادمین با استفاده از Code Splitting، Lazy Loading و تکنیک‌های memoization که منجر به کاهش محسوس زمان بارگذاری اولیه و بهبود امتیاز Lighthouse شد.",
+                        "طراحی و توسعه فرم‌های چندمرحله‌ای (Wizard) با اعتبارسنجی پیشرفته، مدیریت state بهینه و رندر داینامیک فیلدها برای بهبود تجربه کاربری.",
+                        "طراحی و پیاده‌سازی سیستم ترجمه اختصاصی برای پشتیبانی کامل از RTL/LTR.",
+                        "ساخت کامپوننت‌های reusable و مقیاس‌پذیر با React و Ant Design برای افزایش یکپارچگی کد و کاهش تکرار در پروژه‌ها.",
+                        "پیاده‌سازی داشبوردهای تحلیلی با نمودارهای پویا و فیلترهای داینامیک جهت نمایش داده‌های لجستیکی و عملکرد سازمانی.",
+                        "توسعه هوک‌های سفارشی مدیریت API با قابلیت کشینگ و حذف درخواست‌های تکراری برای افزایش پایداری فرانت‌اند.",
+                        "کاهش رندرهای غیرضروری با بهینه‌سازی ساختار state و استفاده از تکنیک‌های debounce و throttle."
+                    ]
+                }
+            ]
+        },
+        projects: {
+            items: [
+                {
+                    title: "دستیار جلسات فارسی",
+                    description: "دستیار صوتی هوشمند برای جلسات با قابلیت رونویسی لحظه‌ای و خلاصه‌سازی فارسی مبتنی بر هوش مصنوعی (وب‌اپلیکیشن و افزونه مرورگر).",
+                    technologies: ["Preact", "Node.js", "Browser Extension"],
+                    topics: [
+                        "پیاده‌سازی رونویسی صوتی لحظه‌ای با Google Speech-to-Text و پردازش صوت در مرورگر",
+                        "طراحی سیستم تشخیص گویندگان (Speaker Diarization) در Google Meet",
+                        "یکپارچه‌سازی OpenAI API برای تولید خلاصه جلسات",
+                        "توسعه افزونه چندمرورگری (Chrome, Firefox, Edge) با Manifest V3"
+                    ],
+                    link: "#"
+                },
+                {
+                    title: "رزومه ساز",
+                    description: "توسعه اپلیکیشن رزومه ساز دوزبانه با پشتیبانی کامل از RTL و قالب‌های حرفه‌ای.",
+                    technologies: ["React", "Node.js", "MongoDB", "Docker", "Antd"],
+                    topics: [
+                        "پیاده‌سازی احراز هویت JWT و کنترل دسترسی مبتنی بر نقش + پنل مدیریت",
+                        "پشتیبانی کامل از فارسی و انگلیسی با تغییر خودکار RTL و فونت‌ها",
+                        "طراحی ۴ قالب رزومه با پیش‌نمایش لحظه‌ای و بیش از ۱۵ تم رنگی",
+                        "توسعه APIهای بک‌اند و آپلود امن فایل با Express و MongoDB",
+                    ],
+                    link: "#"
+                },
+                {
+                    title: "داشبورد ساخت پرزنتیشن داینامیک",
+                    description: "توسعه پلتفرم ساخت و اشتراک‌گذاری صفحات ارائه مبتنی بر داده‌های گزارش سالانه دیجیکالا.",
+                    technologies: ["React", "Node.js", "React Query", "Supabase", "Chart.js", "Framer Motion", "Vitest", "CSS"],
+                    topics: [
+                        "مدیریت داده و استیت با React Query و مسیریابی با React Router",
+                        "پیاده‌سازی نمودارهای تعاملی با Chart.js و انیمیشن با Framer Motion",
+                        "توسعه بک‌اند Node.js و ارتباط بهینه با APIها",
+                        "نوشتن تست‌های واحد با Vitest",
+                    ],
+                    link: "#",
+                },
+                {
+                    title: "سبد خرید",
+                    description: "توسعه سبد خرید ریسپانسیو با تجربه کاربری روان.",
+                    technologies: ["Next.js", "Redux", "Tailwindcss", "Swiper", "Git"],
+                    topics: [
+                        "مدیریت استیت سبد خرید با Redux (افزودن، حذف و ویرایش تعداد)",
+                        "پیاده‌سازی با Next.js و Tailwind CSS"
+                    ],
+                    link: "https://accessory-market.netlify.app/"
+                },
+                {
+                    title: "داشبورد ارز دیجیتال",
+                    description: "داشبورد ارز داشبورد ارز دیجیتال با رابط کاربری مدرن و احراز هویت.",
+                    technologies: ["React", "Firebase", "React Query", "Tailwindcss", "Zod", "React Hook Form", "Framer Motion", "Chart.js", "Git"],
+                    topics: [
+                        "توسعه با React، Tailwind، React Query و Framer Motion",
+                        "پیاده‌سازی احراز هویت Firebase",
+                        "نمایش داده‌های بازار به‌صورت بصری با Chart.js",
+                    ],
+                    link: "https://cryptocurrency-dashboardd.netlify.app/"
+                },
+                {
+                    title: "وبسایت فیلم",
+                    description: "وب‌سایت فیلم با قابلیت فیلتر و مدیریت محتوا.",
+                    technologies: ["React", "React Query", "Bootstrap", "Git"],
+                    topics: [
+                        "مدیریت داده با React Query",
+                        "طراحی ریسپانسیو با Bootstrap",
+                        "پیاده‌سازی احراز هویت و افزودن فیلم جدید"
+                    ],
+                    link: "https://movie-app-reactjs-three.vercel.app/"
+                },
+            ]
+        },
+        education: {
+            degree: "کارشناس",
+            study_field: "مهندسی صنایع",
+            period: "",
+            university: "دانشگاه آزاد اسلامی",
+            city: "سمنان"
+        },
+        languages: ["فارسی", "انگلیسی"],
+        activities: {
+            company: "موسسه کاریار",
+            company_link: "https://kaaryar.ir/",
+            role: "مربی حل تمرین و منتور",
+            period: "مرداد ۱۴۰۲ - تاکنون",
+            description: "من به عنوان منتور و مربی حل تمرین در دوره های کاریار داوطلب شدم. هدف کاریار توانمندسازی افراد با دسترسی محدود به محتوای آموزشی و فناوری با فراهم کردن منابع لازم برای ارتقای چشم انداز تحصیلی و شغلی آنهاست."
+        }
+    },
 }

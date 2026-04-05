@@ -1,12 +1,16 @@
-import { BsDownload } from 'react-icons/bs'
+import { useContext } from 'react'
+import { BsEye } from 'react-icons/bs'
+import { LanguageContext } from '../../../contexts/LanguageContext'
+import portfolioData from '../../../constants/portfolio-data'
 import Flower from '../../../assets/decorate.png'
 import ProfilePhoto from '../../../assets/profile-photo.png'
 import SocialLinks from '../../../components/SocialLinks/SocialLinks'
 import Link from '../../../components/Link/Link'
 import './Hero.css'
 
-function Hero({ lang, portfolioData }) {
-  const t = portfolioData[lang].hero
+function Hero() {
+  const { language } = useContext(LanguageContext)
+  const t = portfolioData[language].hero
 
   return (
     <section
@@ -24,12 +28,8 @@ function Hero({ lang, portfolioData }) {
 
         {/* CV Button */}
         <div className="flex flex-wrap items-center gap-6">
-          <a
-            href={t.cvLink}
-            download
-            className="gap-2 px-6 py-4 rounded-2xl cv-button"
-          >
-            <BsDownload className="text-lg" />
+          <a href={t.cvLink} className="gap-2 px-6 py-4 rounded-2xl cv-button">
+            <BsEye className="text-lg" />
             {t.cvButton}
           </a>
         </div>
@@ -57,7 +57,7 @@ function Hero({ lang, portfolioData }) {
       <div className="flex items-center justify-center w-full px-0 md:w-1/2 md:px-[56px] relative">
         {/* purple flower */}
         <div
-          className={`absolute md:-bottom-12 w-[199px] h-[190px] md:w-[439px] md:h-[418px] z-0 ${lang === 'fa' ? 'right-0' : 'left-0'}`}
+          className={`absolute md:-bottom-12 w-[199px] h-[190px] md:w-[439px] md:h-[418px] z-0 ${language === 'fa' ? 'right-0' : 'left-0'}`}
         >
           <img
             src={Flower}

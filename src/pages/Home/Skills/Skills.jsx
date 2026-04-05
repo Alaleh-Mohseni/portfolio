@@ -1,7 +1,12 @@
+import { useContext } from 'react'
+import { LanguageContext } from '../../../contexts/LanguageContext'
+import portfolioData from '../../../constants/portfolio-data'
 import './Skills.css'
 
-function Skills({ lang, portfolioData }) {
-  const skillsData = portfolioData[lang].skills
+function Skills() {
+  const { language } = useContext(LanguageContext)
+  const skillsData = portfolioData[language].skills
+
   return (
     <section
       className="w-full flex items-center justify-center skills"

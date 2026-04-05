@@ -1,7 +1,11 @@
+import { useContext } from 'react'
+import { LanguageContext } from '../../../contexts/LanguageContext'
+import portfolioData from '../../../constants/portfolio-data'
 import SocialLinks from '../../../components/SocialLinks/SocialLinks'
 
-function Footer({ lang, portfolioData }) {
-  const t = portfolioData[lang].hero
+function Footer() {
+  const { language } = useContext(LanguageContext)
+  const t = portfolioData[language].hero
 
   return (
     <footer className="footer flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4 p-6 md:p-8">

@@ -1,8 +1,12 @@
+import { useContext } from 'react'
+import { LanguageContext } from '../../../contexts/LanguageContext'
+import portfolioData from '../../../constants/portfolio-data'
 import Link from '../../../components/Link/Link'
 import './Experience.css'
 
-function Experience({ lang, portfolioData }) {
-  const data = portfolioData[lang]?.experience
+function Experience() {
+  const { language } = useContext(LanguageContext)
+  const data = portfolioData[language]?.experience
 
   return (
     <section className="experience relative" id="experience">

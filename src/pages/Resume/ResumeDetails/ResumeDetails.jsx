@@ -1,4 +1,9 @@
+import { useContext } from 'react'
+import { LanguageContext } from '../../../contexts/LanguageContext'
+
 function ResumeDetails({ title, link, name, time, des, details, tec }) {
+  const { language } = useContext(LanguageContext)
+
   return (
     <>
       <div className="flex justify-between items-center">
@@ -19,7 +24,7 @@ function ResumeDetails({ title, link, name, time, des, details, tec }) {
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:opacity-70 transition-opacity"
               >
-                Link
+                {language === 'en' ? 'Link' : 'لینک'}
               </a>
             </>
           )}
@@ -44,11 +49,13 @@ function ResumeDetails({ title, link, name, time, des, details, tec }) {
         </div>
         {time && <p className="text-sm">{time}</p>}
       </div>
-      <p>{des}</p>
+      <p className="py-0.5">{des}</p>
       {details && (
-        <ul>
+        <ul
+          className={`list-disc ${language === 'en' ? 'pl-5' : 'ps-5'} space-y-1`}
+        >
           {details.map((item) => (
-            <li className="text-sm font-light list-disc">{item}</li>
+            <li className="text-sm font-light list-disc py-1">{item}</li>
           ))}
         </ul>
       )}

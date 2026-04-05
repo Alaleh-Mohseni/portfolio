@@ -35,7 +35,7 @@
     margin: 0 auto;
     width: 100%;
     background-color: var(--print-bg);
-    color: #1f1f24;
+    color: var(--print-text-color);
   }
 
   .card {
@@ -47,7 +47,7 @@
 
   @page {
     size: auto;
-    margin: 0mm;
+    margin: 4mm 0mm;
   }
 
   html {
@@ -55,12 +55,6 @@
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
     background-color: var(--print-bg);
-  }
-
-  .header {
-    width: 100%;
-    padding: 1rem;
-    height: auto;
   }
 
   a[href]:after {
@@ -91,7 +85,7 @@
 
   h3 {
     font-size: 12px !important;
-    color: #000000;
+    color: var(--print-text-color);
   }
 
   h4 {
@@ -102,13 +96,14 @@
     font-size: 14px !important;
   }
 
-  .section li {
-    color: var(--foreground);
-  }
-
   .detail-content {
     padding: 0 2rem !important;
     margin-bottom: 1rem !important;
     height: auto;
+  }
+
+  .cv-button,
+  .back-button {
+    display: none;
   }
 }
