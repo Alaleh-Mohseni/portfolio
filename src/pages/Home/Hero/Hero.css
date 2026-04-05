@@ -18,14 +18,10 @@
   top: 0;
   left: 0;
   background-image: url('../../../assets/background.png');
-  filter: invert(100%);
+  filter: invert(var(--filter-bg));
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
   z-index: -1;
-}
-
-:root:not(.dark) .hero-dark {
-  filter: invert(0);
 }

@@ -20,10 +20,6 @@
     width: 100%;
     box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
   }
-
-  :root:not(.dark) .card {
-    background-color: #ffffff;
-  }
 }
 
 @media print {

@@ -1,13 +1,13 @@
 .experience-card {
-  background-color: #24242d;
-  border-color: #5e5e63;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--surface);
+  border-color: var(--card-border-color);
+  box-shadow: var(--card-box-shadow);
   transition: all 0.3s ease;
 }
 
 .experience-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--card-box-shadow);
 }
 
 .decorate {
@@ -17,7 +17,7 @@
   top: 0;
   left: 0;
   background-image: url('../../../assets/background.png');
-  filter: invert(100%);
+  filter: invert(var(--filter-bg));
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,22 +25,6 @@
   z-index: -1;
 }
 
-/* Light Mode Card Styles */
-:root:not(.dark) .experience-card {
-  background-color: #edeaf8;
-  border-color: #dfdfea;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-:root:not(.dark) .experience-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-}
-
-:root:not(.dark) .decorate {
-  filter: invert(0);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .experience {
     padding: 80px 24px;

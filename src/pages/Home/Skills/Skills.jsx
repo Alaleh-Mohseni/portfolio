@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import { LanguageContext } from '../../../contexts/LanguageContext'
 import portfolioData from '../../../constants/portfolio-data'
-import './Skills.css'
 
 function Skills() {
   const { language } = useContext(LanguageContext)
@@ -32,7 +31,7 @@ function Skills() {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-base font-normal text-white text-center tracking-wide skill-name">
+              <span className="text-base font-normal text-[var(--foreground)] text-center tracking-wide">
                 {skill.name}
               </span>
             </div>

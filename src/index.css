@@ -5,15 +5,24 @@
 
 @layer base {
   :root {
+    color-scheme: light dark;
+
     /* Light Mode Colors */
     --background: #ffffff;
     --foreground: #1f1f24;
     --muted-foreground: #565662;
     --accent: #6e4ef2;
+    --tag-bg: rgba(110, 78, 242, 0.08);
+    --tag-border: 1px solid rgba(110, 78, 242, 0.15);
     --accent-gradient: linear-gradient(90deg, #6e4ef2 0%, #8c71ff 100%);
-    --surface: #edeaf8; /* Skills & Projects background */
+    --surface: #edeaf8;
     --header-bg: #ffffff;
+    --header-bg-scrolled: rgba(255, 255, 255, 0.7);
     --active-link: var(--accent);
+    --card-border-color: #dfdfea;
+    --card-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    --img-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+    --filter-bg: 0;
 
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -38,18 +47,25 @@
     --print-font-size: 0.85rem;
   }
 
-  /* Default Dark Mode */
-  /* :root, */
+  /* Dark Mode */
   .dark {
-    /* Dark Mode Colors */
+    color-scheme: dark;
+
     --background: #1f1f24;
     --foreground: #ffffff;
     --muted-foreground: #8f8f92;
     --surface: #272730;
     --header-bg: #272730;
+    --tag-bg: #e9e3ff;
+    --tag-border: none;
+    --header-bg-scrolled: rgba(39, 39, 48, 0.6);
     --scrollbar-track: #272730;
     --scrollbar-thumb: #bcbcbe;
     --active-link: #ffffff;
+    --card-border-color: #5e5e63;
+    --card-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --img-box-shadow: none;
+    --filter-bg: 100%;
   }
 
   html {
@@ -144,7 +160,7 @@
   }
 
   .card {
-    background-color: var(--surface);
+    background-color: var(--header-bg);
   }
 
   .main {
@@ -180,17 +196,6 @@
       padding: 0 !important;
     }
   }
-}
-
-/* Light Mode Override */
-:root:not(.dark) {
-  --background: #ffffff;
-  --foreground: #1f1f24;
-  --muted-foreground: #565662;
-  --surface: #edeaf8;
-  --header-bg: #ffffff;
-  --scrollbar-track: #ffffff;
-  --scrollbar-thumb: #bcbcbe;
 }
 
 /* Custom Scrollbar */
