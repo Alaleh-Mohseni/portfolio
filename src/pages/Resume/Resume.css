@@ -1,32 +1,4 @@
-.content {
-  max-width: 968px;
-  width: calc(100% - 3rem);
-  margin-left: var(--mb-3);
-  margin-right: var(--mb-3);
-}
-
-.main {
-  margin: var(--header-height) 0;
-  padding: 0;
-}
-
-@media screen and (min-width: 968px) {
-  .content {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .card {
-    width: 100%;
-    box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
-  }
-}
-
 @media print {
-  body {
-    background-color: var(--print-bg);
-  }
-
   .content {
     margin: 0 auto;
     width: 100%;
@@ -38,18 +10,6 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: var(--print-bg);
-  }
-
-  @page {
-    size: auto;
-    margin: 4mm 0mm;
-  }
-
-  html {
-    font-size: var(--print-font-size);
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
     background-color: var(--print-bg);
   }
 
@@ -67,29 +27,8 @@
     gap: 2px !important;
   }
 
-  .profile,
-  .skill {
+  .profile {
     gap: 0 !important;
-  }
-
-  p,
-  a,
-  span {
-    font-size: 10px !important;
-    font-weight: 400 !important;
-  }
-
-  h3 {
-    font-size: 12px !important;
-    color: var(--print-text-color);
-  }
-
-  h4 {
-    color: var(--mute-foreground);
-  }
-
-  h2 {
-    font-size: 14px !important;
   }
 
   .detail-content {

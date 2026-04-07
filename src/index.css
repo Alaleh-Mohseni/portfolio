@@ -66,6 +66,7 @@
     --card-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     --img-box-shadow: none;
     --filter-bg: 100%;
+    --print-bg: #ffffff;
   }
 
   html {
@@ -159,14 +160,6 @@
     font-size: var(--h3-font-size);
   }
 
-  .card {
-    background-color: var(--header-bg);
-  }
-
-  .main {
-    font-family: var(--font-main);
-  }
-
   /* Mobile header controls animation */
   @media (max-width: 767px) {
     .header--hidden .header__controls {
@@ -189,10 +182,53 @@
   }
 
   @media print {
+    .dark {
+      --background: var(--print-bg);
+      --foreground: var(--print-text-color);
+      --surface: var(--print-bg);
+      --header-bg: var(--print-bg);
+      --card-border-color: #cccccc;
+    }
+
+    body {
+      background-color: var(--print-bg);
+    }
+
+    html {
+      font-size: var(--print-font-size);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      background-color: var(--print-bg);
+    }
+
+    @page {
+      size: auto;
+      margin: 4mm 0mm;
+    }
+
+    p,
+    a,
+    span,
     li {
-      color: var(--print-text-color) !important;
       font-size: 10px !important;
       font-weight: 400 !important;
+    }
+
+    h2 {
+      font-size: 14px !important;
+    }
+
+    h3 {
+      font-size: 12px !important;
+      color: var(--print-text-color);
+    }
+
+    h4 {
+      color: var(--muted-foreground);
+    }
+
+    li {
+      color: var(--print-text-color);
       padding: 0 !important;
     }
   }
