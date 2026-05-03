@@ -11,13 +11,15 @@ import './Projects.css'
 
 function Projects({ lang, portfolioData }) {
   const data = portfolioData[lang].projects
-  const [activeCategory, setActiveCategory] = useState('All Projects')
+  const [activeCategory, setActiveCategory] = useState('all')
   const [previewImage, setPreviewImage] = useState(null)
 
   const filteredProjects =
-    activeCategory === 'All Projects' || activeCategory === 'همه پروژه‌ها'
+    activeCategory === 'all'
       ? data.items
-      : data.items.filter((project) => project.category === 'Dashboard')
+      : data.items.filter((project) =>
+          project.category.includes(activeCategory)
+        )
 
   return (
     <section className="projects" id="projects">
@@ -32,11 +34,17 @@ function Projects({ lang, portfolioData }) {
         <div className="flex flex-wrap items-center justify-start gap-3 mb-16">
           {data.categories.map((category) => (
             <button
-              key={category}
-              onClick={() => setActiveCategory(category)}
-              className={`filter-button ${activeCategory === category ? 'active' : ''}`}
+              key={category.key}
+              onClick={() => setActiveCategory(category.key)}
+              className={`h-10 min-w-[120px] md:min-w-[120px] px-5 md:px-5 text-sm md:text-sm font-medium rounded-[10px] bg-transparent cursor-pointer transition-all duration-[250ms] ease-in-out
+                ${
+                  activeCategory === category.key
+                    ? 'bg-[image:var(--accent-gradient)] text-white border-transparent'
+                    : 'text-[var(--foreground)] border border-[var(--foreground)] hover:border-[var(--accent)] hover:text-[var(--accent)]'
+                }
+                max-md:min-w-auto max-md:px-3.5 max-md:text-[13px] max-md:h-9`}
             >
-              {category}
+              {category.label}
             </button>
           ))}
         </div>
@@ -44,26 +52,29 @@ function Projects({ lang, portfolioData }) {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
           {filteredProjects.map((project) => (
-            <div key={project.id} className="project-card">
+            <div
+              key={project.id}
+              className="p-4 flex flex-col gap-4 rounded-2xl bg-[var(--background)] transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(0,0,0,0.12)] max-md:p-3.5 max-md:gap-3.5"
+            >
               {/* Project Image */}
               <div
-                className="project-image-wrapper"
+                className="group w-full h-[200px] overflow-hidden cursor-pointer relative rounded-xl shadow-[var(--img-box-shadow)] max-md:h-[220px]"
                 onClick={() => setPreviewImage(project.image)}
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="project-image"
+                  className="w-full h-full object-cover object-top transition-transform duration-[350ms] ease-in-out group-hover:scale-[1.06]"
                 />
-                <div className="project-image-overlay">
-                  <span className="preview-hint">
+                <div className="absolute inset-0 bg-[rgba(110,78,242,0.15)] flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span className="text-white text-[13px] font-medium bg-[rgba(0,0,0,0.45)] px-3.5 py-1.5 rounded-[20px] backdrop-blur-[4px]">
                     {lang === 'fa' ? 'مشاهده تصویر' : 'Click to preview'}
                   </span>
                 </div>
               </div>
 
               {/* Project Info */}
-              <div className="project-info">
+              <div className="flex flex-col flex-1">
                 <div className="flex items-center justify-between mb-1">
                   <h4>{project.title}</h4>
                   {project.link && project.link !== '#' && (
@@ -93,7 +104,10 @@ function Projects({ lang, portfolioData }) {
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-1.5">
                   {project.technologies.map((tech, index) => (
-                    <span key={index} className="tech-badge">
+                    <span
+                      key={index}
+                      className="flex justify-center items-center px-2.5 py-[3px] rounded text-[11px] font-medium bg-[var(--tag-bg)] text-[var(--accent)] border-[var(--tag-border)]"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -106,15 +120,25 @@ function Projects({ lang, portfolioData }) {
 
       {/* Image Preview Modal */}
       {previewImage && (
-        <div className="preview-modal" onClick={() => setPreviewImage(null)}>
+        <div
+          className="fixed inset-0 bg-[rgba(0,0,0,0.6)] flex items-center justify-center z-[9999] p-10 animate-fadeIn cursor-pointer backdrop-blur-[4px] max-md:p-4"
+          onClick={() => setPreviewImage(null)}
+        >
           <button
-            className="close-button"
+            className="fixed top-5 right-5 w-9 h-9 bg-[rgba(255,255,255,0.15)] backdrop-blur-[6px] border border-[rgba(255,255,255,0.2)] rounded-full text-white text-base cursor-pointer transition-all duration-[250ms] ease-in-out flex items-center justify-center z-[10000] hover:rotate-90 hover:bg-[rgba(255,255,255,0.25)] max-md:top-3 max-md:right-3"
             onClick={() => setPreviewImage(null)}
           >
             <GrClose />
           </button>
-          <div className="preview-content" onClick={(e) => e.stopPropagation()}>
-            <img src={previewImage} alt="Preview" className="preview-image" />
+          <div
+            className="relative max-w-[90vw] max-h-[90vh] animate-zoomIn max-md:max-w-[95vw] max-md:max-h-[95vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={previewImage}
+              alt="Preview"
+              className="w-full h-full max-w-[90vw] max-h-[90vh] object-contain rounded-[1px] shadow-[0_24px_64px_rgba(0,0,0,0.6)] max-md:max-w-[95vw] max-md:max-h-[95vh]"
+            />
           </div>
         </div>
       )}

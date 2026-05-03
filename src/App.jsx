@@ -18,8 +18,8 @@ function App() {
         <Skills lang={language} portfolioData={portfolioData} />
         <Experience lang={language} portfolioData={portfolioData} />
         <Projects lang={language} portfolioData={portfolioData} />
-        <Footer lang={language} portfolioData={portfolioData} />
       </main>
+      <Footer lang={language} portfolioData={portfolioData} />
     </div>
   )
 }

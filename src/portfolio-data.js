@@ -56,7 +56,14 @@ const portfolioData = {
         projects: {
             title: "My Latest Works",
             subtitle: "Real-world applications built for clients and the community.",
-            categories: ["All Projects", "Dashboard", "Web Design", "Mobile App", "UI/UX"],
+            categories: [
+                { key: "all", label: "All Projects" },
+                { key: "dashboard", label: "Dashboard" },
+                { key: "web", label: "Web Design" },
+                { key: "mobile", label: "Mobile App" },
+                { key: "uiux", label: "UI/UX" },
+                { key: "extension", label: "Extension" },
+            ],
             items: [
                 {
                     id: 1,
@@ -64,7 +71,7 @@ const portfolioData = {
                     description: "Performance Management Dashboard",
                     // description: "Performance Management Dashboard",
                     description: "A bilingual (RTL/LTR) organizational performance management panel featuring interactive tools like 360-degree feedback, meeting calendars, and real-time team insights.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Node.js", "Ant", "MongoDB", "Docker", "Recharts", "Nodemailer", "Papaparse", "Node-cron"],
                     image: "/projects/aKeep.png",
                     link: "#"
@@ -74,7 +81,7 @@ const portfolioData = {
                     title: "Sampars",
                     // description: "Logistics Dashboard",
                     description: "An analytical dashboard for a logistics platform that visualizes order and shipment statuses, helping teams monitor and manage delivery operations efficiently.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Node.js", "MongoDB", "Lodash", "Docker", "Ant", "Nodemailer", "Xlsx", "Recharts", "ClickHouse"],
                     image: "/projects/sampars.png",
                     link: "#"
@@ -84,7 +91,7 @@ const portfolioData = {
                     title: "Karyar Digital",
                     // description: "Profile Management Dashboard & Course Registration System",
                     description: "A comprehensive dashboard for managing user profiles and handling course registration, designed to streamline the educational enrollment process.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Node.js", "Ant", "MongoDB", "Docker", "Lodash", "Xlsx", "Nodemailer"],
                     image: "/projects/karyar-digital.png",
                     link: "https://digital.kaaryar.ir/"
@@ -94,7 +101,7 @@ const portfolioData = {
                     title: "Divar",
                     // description: "Province Guessing Game",
                     description: "An interactive web-based game where users guess Iranian provinces through visual and contextual clues, built with smooth animations and engaging gameplay.",
-                    category: "Web Design",
+                    category: ["web"],
                     technologies: ["Next.js", "Node.js", "Typescript", "MongoDB", "Docker", "Tailwindcss", "Framer Motion"],
                     image: "/projects/divar-desktop.png",
                     link: "#"
@@ -104,7 +111,7 @@ const portfolioData = {
                     title: "Nexis",
                     // description: "Hub Management Dashboard & Mobile Web App",
                     description: "A hub management system with both a desktop dashboard and a mobile web app, enabling real-time monitoring and control of operational hubs.",
-                    category: "Dashboard",
+                    category: ["dashboard", "mobile"],
                     technologies: ["React", "Node.js", "MongoDB", "Docker", "Ant", "Typescript"],
                     image: "/projects/nexis.png",
                     link: "#"
@@ -114,7 +121,7 @@ const portfolioData = {
                     title: "Karyar Studio",
                     // description: "Business Landing Page",
                     description: "A modern, visually polished business landing page for Karyar Studio, crafted based on Figma designs to reflect the brand's identity and services.",
-                    category: "Web Design",
+                    category: ["web", "uiux"],
                     technologies: ["React", "CSS", "Figma"],
                     image: "/projects/karyar-studio.png",
                     link: "https://studio.kaaryar.ir/"
@@ -124,7 +131,7 @@ const portfolioData = {
                     title: "Ta Code",
                     // description: "Digikala",
                     description: "A responsive front-end clone of Digikala, Iran's largest e-commerce platform, built to practice and demonstrate advanced UI development skills.",
-                    category: "Web Design",
+                    category: ["web"],
                     technologies: ["React", "Sass"],
                     image: "/projects/ta_code.png",
                     link: "#"
@@ -134,7 +141,7 @@ const portfolioData = {
                     title: "Dynamic Presentation Generator",
                     // description: "Digikala's annual report data into interactive presentations",
                     description: "A platform that transforms Digikala's annual report data into shareable, interactive presentation pages with dynamic charts and smooth animations.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Node.js", "React Query", "Supabase", "Chart.js", "Framer Motion", "Vitest", "CSS"],
                     image: "/projects/presentation.jpg",
                     link: "#"
@@ -144,7 +151,7 @@ const portfolioData = {
                     title: "Resume Builder",
                     // description: "Bilingual Resume Builder Dashboard (English & Persian)",
                     description: "A bilingual resume builder supporting full RTL/LTR switching, offering 4 professional templates, 15+ color themes, and live preview with secure user authentication.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Node.js", "MongoDB", "Docker", "Ant", "Git"],
                     image: "/projects/resume-builder.png",
                     link: "#"
@@ -154,7 +161,7 @@ const portfolioData = {
                     title: "Persian Meeting Assistant",
                     // description: "AI-powered meeting assistant for Persian meetings",
                     description: "A browser extension that provides real-time speech-to-text transcription and AI-generated Persian summaries for online meetings like Google Meet.",
-                    category: "Desktop App",
+                    category: ["extension"],
                     technologies: ["Preact", "Node.js", "Tailwindcss", "Google Cloud", "OpenAI", "Git"],
                     image: "/projects/meeting_assistant.png",
                     link: "#"
@@ -164,7 +171,7 @@ const portfolioData = {
                     title: "Cryptocurrency",
                     // description: "Cryptocurrency Dashboard",
                     description: "A modern cryptocurrency dashboard with user authentication, live market data visualization, and interactive charts for tracking digital assets.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Firebase", "React Query", "Tailwindcss", "Zod", "React Hook Form", "Framer Motion", "Chart.js", "Git"],
                     image: "/projects/cryptocurrency.png",
                     link: "https://cryptocurrency-dashboardd.netlify.app/"
@@ -174,7 +181,7 @@ const portfolioData = {
                     title: "The Movie Box",
                     // description: "Movie Website",
                     description: "A responsive movie browsing platform where users can explore, filter, and manage film content, with authentication and data fetching via React Query.",
-                    category: "Web Design",
+                    category: ["web"],
                     technologies: ["React", "React Query", "Bootstrap", "Git"],
                     image: "/projects/film.png",
                     link: "https://movie-app-reactjs-three.vercel.app/"
@@ -184,7 +191,7 @@ const portfolioData = {
                     title: "Shopping Cart",
                     // description: "Responsive shopping cart application",
                     description: "A smooth and responsive e-commerce shopping cart application with full cart state management including add, remove, and quantity update functionality.",
-                    category: "Web Design",
+                    category: ["web"],
                     technologies: ["Next.js", "Redux", "Tailwindcss", "Swiper", "Git"],
                     image: "/projects/jewelry.png",
                     link: "https://accessory-market.netlify.app/"
@@ -273,14 +280,21 @@ const portfolioData = {
         projects: {
             title: "آخرین پروژه‌های من",
             subtitle: "اپلیکیشن‌های واقعی ساخته شده برای مشتریان و جامعه.",
-            categories: ["همه پروژه‌ها", "داشبورد", "طراحی وب", "اپلیکیشن موبایل", "رابط کاربری"],
+            categories: [
+                { key: "all", label: "همه پروژه‌ها" },
+                { key: "dashboard", label: "داشبورد" },
+                { key: "web", label: "طراحی وب" },
+                { key: "mobile", label: "اپلیکیشن موبایل" },
+                { key: "uiux", label: "رابط کاربری" },
+                { key: "extension", label: "افزونه مرورگر" },
+            ],
             items: [
                 {
                     id: 1,
                     title: "اکیپ",
                     // description: "داشبورد مدیریت عملکرد",
                     description: "پنل مدیریت عملکرد سازمانی دوزبانه با ابزارهای تعاملی مثل بازخورد ۳۶۰ درجه و تقویم جلسات، طراحی‌شده برای پایش و ارزیابی عملکرد تیم‌ها.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Node.js", "Ant", "MongoDB", "Docker", "Recharts", "Nodemailer", "Papaparse", "Node-cron"],
                     image: "/projects/aKeep.png",
                     link: "#"
@@ -290,7 +304,7 @@ const portfolioData = {
                     title: "سام پارس",
                     // description: "داشبورد لجستیک",
                     description: "داشبورد تحلیلی برای یک پلتفرم لجستیک که وضعیت سفارش‌ها و شیپمنت‌ها را به‌صورت بصری نمایش می‌دهد تا تیم‌ها عملیات ارسال را بهتر مدیریت کنند.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Node.js", "MongoDB", "Lodash", "Docker", "Ant", "Nodemailer", "Xlsx", "Recharts", "ClickHouse"],
                     image: "/projects/sampars.png",
                     link: "#"
@@ -300,7 +314,7 @@ const portfolioData = {
                     title: "کاریار دیجیتال",
                     // description: "داشبورد مدیریت پروفایل و سیستم ثبت‌نام دوره",
                     description: "پنل مدیریت جامع برای ویرایش پروفایل کاربران و ثبت‌نام در دوره‌های آموزشی، با هدف ساده‌سازی فرآیند ثبت‌نام در بستر دیجیتال.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Node.js", "Ant", "MongoDB", "Docker", "Lodash", "Xlsx", "Nodemailer"],
                     image: "/projects/karyar-digital.png",
                     link: "https://digital.kaaryar.ir/"
@@ -310,9 +324,9 @@ const portfolioData = {
                     title: "دیوار",
                     // description: "بازی حدس استان",
                     description: "یک بازی تعاملی وب‌محور که کاربران باید استان‌های ایران را از روی سرنخ‌های بصری و محتوایی حدس بزنند، همراه با انیمیشن‌های روان.",
-                    category: "Web Design",
+                    category: ["web"],
                     technologies: ["Next.js", "Node.js", "Typescript", "MongoDB", "Docker", "Tailwindcss", "Framer Motion"],
-                    image: "/projects/divar.png",
+                    image: "/projects/divar-desktop.png",
                     link: "#"
                 },
                 {
@@ -320,7 +334,7 @@ const portfolioData = {
                     title: "نکسیس",
                     // description: "داشبورد مدیریت هاب و اپلیکیشن وب موبایل",
                     description: "سیستم مدیریت هاب با داشبورد دسکتاپ و اپلیکیشن وب موبایل، برای پایش و کنترل لحظه‌ای هاب‌های عملیاتی طراحی شده است.",
-                    category: "Dashboard",
+                    category: ["dashboard", "mobile"],
                     technologies: ["React", "Node.js", "MongoDB", "Docker", "Ant", "Typescript"],
                     image: "/projects/nexis.png",
                     link: "#"
@@ -330,7 +344,7 @@ const portfolioData = {
                     title: "کاریار استودیو",
                     // description: "صفحه کسب‌وکار",
                     description: "صفحه فرود کسب‌وکار برای کاریار استودیو که با ظاهری مدرن و مبتنی بر طرح‌های فیگما، هویت برند و خدمات مجموعه را به‌خوبی نمایش می‌دهد.",
-                    category: "Web Design",
+                    category: ["web", "uiux"],
                     technologies: ["React", "CSS", "Figma"],
                     image: "/projects/karyar-studio.png",
                     link: "https://studio.kaaryar.ir/"
@@ -340,7 +354,7 @@ const portfolioData = {
                     title: "تا کد",
                     // description: "دیجی‌کالا",
                     description: "یک کلون فرانت‌اند ریسپانسیو از دیجی‌کالا، بزرگ‌ترین فروشگاه آنلاین ایران، که برای تمرین و نمایش مهارت‌های پیشرفته UI توسعه داده شده.",
-                    category: "Web Design",
+                    category: ["web"],
                     technologies: ["React", "Sass"],
                     image: "/projects/ta_code.png",
                     link: "#"
@@ -350,7 +364,7 @@ const portfolioData = {
                     title: "دیجی‌کالا",
                     // description: "داشبورد ساخت پرزنتیشن داینامیک",
                     description: "پلتفرمی برای تبدیل داده‌های گزارش سالانه دیجی‌کالا به صفحات ارائه تعاملی و قابل اشتراک‌گذاری، با نمودارهای پویا و انیمیشن‌های جذاب.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Node.js", "React Query", "Supabase", "Chart.js", "Framer Motion", "Vitest", "CSS"],
                     image: "/projects/presentation.jpg",
                     link: "#"
@@ -360,7 +374,7 @@ const portfolioData = {
                     title: "رزومه ساز",
                     // description: "داشبورد دوزبانه رزومه ساز (انگلیسی و فارسی)",
                     description: "اپلیکیشن رزومه‌ساز دوزبانه با پشتیبانی کامل RTL/LTR، چهار قالب حرفه‌ای، بیش از ۱۵ تم رنگی و پیش‌نمایش لحظه‌ای همراه با احراز هویت امن.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Node.js", "MongoDB", "Docker", "Ant", "Git"],
                     image: "/projects/resume-builder.png",
                     link: "#"
@@ -370,7 +384,7 @@ const portfolioData = {
                     title: "دستیار جلسات فارسی",
                     // description: "دستیار هوشمند جلسات فارسی با استفاده از هوش مصنوعی",
                     description: "افزونه مرورگر با قابلیت رونویسی صوتی لحظه‌ای و خلاصه‌سازی هوشمند فارسی برای جلسات آنلاین مثل Google Meet با استفاده از هوش مصنوعی.",
-                    category: "Desktop App",
+                    category: ["extension"],
                     technologies: ["Preact", "Node.js", "Tailwindcss", "Google Cloud", "OpenAI", "Git"],
                     image: "/projects/meeting_assistant.png",
                     link: "#"
@@ -380,7 +394,7 @@ const portfolioData = {
                     title: "ارز دیجیتال",
                     // description: "داشبورد ارزهای دیجیتال",
                     description: "داشبورد ارز دیجیتال با رابط کاربری مدرن، احراز هویت کاربران و نمایش بصری داده‌های بازار برای پیگیری لحظه‌ای قیمت دارایی‌های دیجیتال.",
-                    category: "Dashboard",
+                    category: ["dashboard"],
                     technologies: ["React", "Firebase", "React Query", "Tailwindcss", "Zod", "React Hook Form", "Framer Motion", "Chart.js", "Git"],
                     image: "/projects/cryptocurrency.png",
                     link: "https://cryptocurrency-dashboardd.netlify.app/"
@@ -390,7 +404,7 @@ const portfolioData = {
                     title: "جعبه فیلم",
                     // description: "وب‌سایت فیلم",
                     description: "پلتفرم مرور فیلم با امکان جستجو، فیلتر و مدیریت محتوا، همراه با سیستم احراز هویت و واکشی بهینه داده با React Query.",
-                    category: "Web Design",
+                    category: ["web"],
                     technologies: ["React", "React Query", "Bootstrap", "Git"],
                     image: "/projects/film.png",
                     link: "https://movie-app-reactjs-three.vercel.app/"
@@ -400,7 +414,7 @@ const portfolioData = {
                     title: "سبد خرید",
                     // description: "اپلیکیشن سبد خرید ریسپانسیو",
                     description: "اپلیکیشن سبد خرید ریسپانسیو با مدیریت کامل وضعیت سبد شامل افزودن، حذف و تغییر تعداد محصولات، با تجربه کاربری روان و سریع.",
-                    category: "Web Design",
+                    category: ["web"],
                     technologies: ["Next.js", "Redux", "Tailwindcss", "Swiper", "Git"],
                     image: "/projects/jewelry.png",
                     link: "https://accessory-market.netlify.app/"

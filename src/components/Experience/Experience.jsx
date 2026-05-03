@@ -7,6 +7,7 @@ function Experience({ lang, portfolioData }) {
   return (
     <section className="experience relative" id="experience">
       <div className="decorate"></div>
+
       <div className="w-full mx-auto">
         {/* Section Title */}
         <h2 className="text-center mb-16">{data.title}</h2>
@@ -16,7 +17,10 @@ function Experience({ lang, portfolioData }) {
           {data.items.map((item, index) => (
             <div
               key={index}
-              className="experience-card rounded-2xl p-12 flex flex-col gap-8 transition-all duration-300 border-2 w-full md:w-[70%]"
+              className="w-full md:w-[70%] rounded-2xl border-2 p-6 md:p-12 flex flex-col gap-5 md:gap-8
+              bg-[var(--surface)] border-[var(--card-border-color)]
+              shadow-[var(--card-box-shadow)]
+              transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--card-box-shadow)]"
             >
               {/* Company Header */}
               <div className="flex items-center gap-4 md:gap-6">
@@ -27,6 +31,7 @@ function Experience({ lang, portfolioData }) {
                     className="w-12 h-12 md:w-16 md:h-16 object-contain flex-shrink-0"
                   />
                 )}
+
                 <div className="flex-1">
                   <Link
                     href={item.companyLink}
@@ -35,16 +40,18 @@ function Experience({ lang, portfolioData }) {
                   >
                     {item.company}
                   </Link>
+
                   <h4 className="text-base md:text-xl font-bold">
                     {item.position}
                   </h4>
+
                   <span className="text-[12px] md:text-[14px] font-normal text-[var(--muted-foreground)] opacity-70">
                     {item.period}
                   </span>
                 </div>
               </div>
 
-              {/* Achievements List */}
+              {/* Achievements */}
               {item.achievements && item.achievements.length > 0 && (
                 <div className="flex flex-col gap-4">
                   {item.achievements.map((achievement, achIndex) => (

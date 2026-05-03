@@ -25,7 +25,3 @@
   pointer-events: none;
   z-index: -1;
 }
-
-:root:not(.dark) .hero-dark {
-  filter: invert(0);
-}

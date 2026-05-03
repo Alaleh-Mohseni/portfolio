@@ -5,35 +5,68 @@
 
 @layer base {
   :root {
+    color-scheme: light dark;
+
     /* Light Mode Colors */
     --background: #ffffff;
     --foreground: #1f1f24;
     --muted-foreground: #565662;
     --accent: #6e4ef2;
+    --tag-bg: rgba(110, 78, 242, 0.08);
+    --tag-border: 1px solid rgba(110, 78, 242, 0.15);
     --accent-gradient: linear-gradient(90deg, #6e4ef2 0%, #8c71ff 100%);
-    --surface: #edeaf8; /* Skills & Projects background */
+    --surface: #edeaf8;
     --header-bg: #ffffff;
+    --header-bg-scrolled: rgba(255, 255, 255, 0.7);
     --active-link: var(--accent);
+    --card-border-color: #dfdfea;
+    --card-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    --img-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+    --filter-bg: 0;
+
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+
+    --mb-0-25: 0.25rem;
+    --mb-1: 0.5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --header-height: 3rem;
 
     /* Typography */
-    --font-main: 'Inter', 'Vazirmatn', sans-serif;
+    --font-main: 'Inter', 'Vazirmatn';
 
+    /* Scrollbar */
     --scrollbar-track: #ffffff;
     --scrollbar-thumb: #bcbcbe;
+
+    /* Print */
+    --print-bg: #ffffff;
+    --print-text-color: #000000;
+    --print-font-size: 0.85rem;
   }
 
-  /* Default Dark Mode */
-  /* :root, */
+  /* Dark Mode */
   .dark {
-    /* Dark Mode Colors */
+    color-scheme: dark;
+
     --background: #1f1f24;
     --foreground: #ffffff;
     --muted-foreground: #8f8f92;
     --surface: #272730;
     --header-bg: #272730;
+    --tag-bg: #e9e3ff;
+    --tag-border: none;
+    --header-bg-scrolled: rgba(39, 39, 48, 0.6);
     --scrollbar-track: #272730;
     --scrollbar-thumb: #bcbcbe;
     --active-link: #ffffff;
+    --card-border-color: #5e5e63;
+    --card-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --img-box-shadow: none;
+    --filter-bg: 100%;
+    --print-bg: #ffffff;
   }
 
   html {
@@ -51,7 +84,7 @@
 
   /* Headings */
   h1 {
-    @apply text-6xl font-bold leading-tight;
+    @apply text-5xl md:text-6xl font-bold leading-tight;
     color: var(--accent);
   }
 
@@ -108,12 +141,23 @@
   }
 
   .experience {
-    @apply px-4 md:px-[60px] py-[150px];
+    @apply py-[60px] px-4 sm:py-[80px] sm:px-6 md:py-[150px] md:px-[60px];
   }
 
   .header {
     background-color: var(--header-bg);
     @apply sticky top-0 z-50 backdrop-blur-md;
+  }
+
+  .resume h2 {
+    border-bottom: 1px solid #cccccc;
+    color: var(--accent);
+    font-size: var(--h2-font-size);
+  }
+
+  .section h3 {
+    color: var(--foreground);
+    font-size: var(--h3-font-size);
   }
 
   /* Mobile header controls animation */
@@ -136,17 +180,58 @@
     background: var(--accent-gradient);
     @apply text-[16px] font-medium text-white flex items-center px-6 py-2 rounded-lg transition-transform active:scale-95;
   }
-}
 
-/* Light Mode Override */
-:root:not(.dark) {
-  --background: #ffffff;
-  --foreground: #1f1f24;
-  --muted-foreground: #565662;
-  --surface: #edeaf8;
-  --header-bg: #ffffff;
-  --scrollbar-track: #ffffff;
-  --scrollbar-thumb: #bcbcbe;
+  @media print {
+    .dark {
+      --background: var(--print-bg);
+      --foreground: var(--print-text-color);
+      --surface: var(--print-bg);
+      --header-bg: var(--print-bg);
+      --card-border-color: #cccccc;
+    }
+
+    body {
+      background-color: var(--print-bg);
+    }
+
+    html {
+      font-size: var(--print-font-size);
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+      background-color: var(--print-bg);
+    }
+
+    @page {
+      size: auto;
+      margin: 4mm 0mm;
+    }
+
+    p,
+    a,
+    span,
+    li {
+      font-size: 10px !important;
+      font-weight: 400 !important;
+    }
+
+    h2 {
+      font-size: 14px !important;
+    }
+
+    h3 {
+      font-size: 12px !important;
+      color: var(--print-text-color);
+    }
+
+    h4 {
+      color: var(--muted-foreground);
+    }
+
+    li {
+      color: var(--print-text-color);
+      padding: 0 !important;
+    }
+  }
 }
 
 /* Custom Scrollbar */
