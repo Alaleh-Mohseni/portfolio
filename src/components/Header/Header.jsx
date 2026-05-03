@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { BsGlobe, BsSun, BsMoon } from 'react-icons/bs'
 import useThrottle from '../../hooks/useThrottle'
+import { ThemeContext } from '../../contexts/ThemeContext'
+import { LanguageContext } from '../../contexts/LanguageContext'
 import './Header.css'
 
 const navLinks = [
@@ -10,26 +12,16 @@ const navLinks = [
   { id: 'projects', en: 'Projects', fa: 'پروژه‌ها' },
 ]
 
-function Header({ language, setLanguage }) {
-  const [isDark, setIsDark] = useState(true)
+function Header() {
+  const { language, toggleLanguage } = useContext(LanguageContext)
+  const { theme, setTheme } = useContext(ThemeContext)
   const [activeSection, setActiveSection] = useState('hero')
   const [isScrolled, setIsScrolled] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [isHeaderVisible, setIsHeaderVisible] = useState(true)
 
   const toggleTheme = () => {
-    setIsDark(!isDark)
-    document.documentElement.classList.toggle('dark')
-  }
-
-  const toggleLanguage = () => {
-    const newLang = language === 'en' ? 'fa' : 'en'
-    setLanguage(newLang)
-    document.documentElement.setAttribute(
-      'dir',
-      newLang === 'fa' ? 'rtl' : 'ltr'
-    )
-    document.documentElement.setAttribute('lang', newLang)
+    setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
   const scrollToSection = (id) => {
@@ -109,14 +101,16 @@ function Header({ language, setLanguage }) {
         </ul>
       </nav>
 
-      <div className="header__controls flex items-center gap-4">
+      <div className="header__controls flex justify-center gap-2">
         <button
           onClick={toggleLanguage}
-          className="header-button flex items-center gap-2"
+          className="header-button flex justify-center gap-2"
           aria-label="Toggle language"
         >
           <BsGlobe className="text-xl" />
-          <span className="text-base font-medium uppercase">{language}</span>
+          <span className="text-base font-medium uppercase language">
+            {language}
+          </span>
         </button>
 
         <button
@@ -124,7 +118,7 @@ function Header({ language, setLanguage }) {
           className="header-button flex items-center gap-2"
           aria-label="Toggle theme"
         >
-          {isDark ? (
+          {theme === 'dark' ? (
             <BsSun className="text-xl" />
           ) : (
             <BsMoon className="text-xl" />

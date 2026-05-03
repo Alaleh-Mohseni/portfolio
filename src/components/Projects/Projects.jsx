@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { GrClose } from 'react-icons/gr'
 import {
   BsArrowUpRightCircle,
@@ -6,11 +6,14 @@ import {
   BsArrowUpRightCircleFill,
   BsArrowUpLeftCircleFill,
 } from 'react-icons/bs'
+import { LanguageContext } from '../../contexts/LanguageContext'
+import portfolioData from '../../data/portfolio-data'
 import Link from '../Link/Link'
 import './Projects.css'
 
-function Projects({ lang, portfolioData }) {
-  const data = portfolioData[lang].projects
+function Projects() {
+  const { language } = useContext(LanguageContext)
+  const data = portfolioData[language].projects
   const [activeCategory, setActiveCategory] = useState('all')
   const [previewImage, setPreviewImage] = useState(null)
 
@@ -37,12 +40,12 @@ function Projects({ lang, portfolioData }) {
               key={category.key}
               onClick={() => setActiveCategory(category.key)}
               className={`h-10 min-w-[120px] md:min-w-[120px] px-5 md:px-5 text-sm md:text-sm font-medium rounded-[10px] bg-transparent cursor-pointer transition-all duration-[250ms] ease-in-out
-                ${
-                  activeCategory === category.key
-                    ? 'bg-[image:var(--accent-gradient)] text-white border-transparent'
-                    : 'text-[var(--foreground)] border border-[var(--foreground)] hover:border-[var(--accent)] hover:text-[var(--accent)]'
-                }
-                max-md:min-w-auto max-md:px-3.5 max-md:text-[13px] max-md:h-9`}
+  ${
+    activeCategory === category.key
+      ? 'bg-[image:var(--accent-gradient)] text-white border-transparent'
+      : 'text-[var(--foreground)] shadow-[var(--btn-shadow)] hover:shadow-[0_0_15px_rgba(110,78,242,0.35)]'
+  }
+  max-md:min-w-auto max-md:px-3.5 max-md:text-[13px] max-md:h-9`}
             >
               {category.label}
             </button>
@@ -68,7 +71,7 @@ function Projects({ lang, portfolioData }) {
                 />
                 <div className="absolute inset-0 bg-[rgba(110,78,242,0.15)] flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="text-white text-[13px] font-medium bg-[rgba(0,0,0,0.45)] px-3.5 py-1.5 rounded-[20px] backdrop-blur-[4px]">
-                    {lang === 'fa' ? 'مشاهده تصویر' : 'Click to preview'}
+                    {language === 'fa' ? 'مشاهده تصویر' : 'Click to preview'}
                   </span>
                 </div>
               </div>
@@ -84,7 +87,7 @@ function Projects({ lang, portfolioData }) {
                       onClick={(e) => e.stopPropagation()}
                       className="text-primary hover:opacity-70 transition-opacity group"
                     >
-                      {lang === 'fa' ? (
+                      {language === 'fa' ? (
                         <>
                           <BsArrowUpLeftCircle className="text-xl group-hover:hidden" />
                           <BsArrowUpLeftCircleFill className="text-xl hidden group-hover:block text-[var(--accent)]" />
