@@ -2,7 +2,22 @@
 
 A modern, bilingual (English/Persian) portfolio website showcasing my work as a Frontend Developer. Built with React, TailwindCSS, and Vite, featuring RTL/LTR support, dark/light theme, and smooth navigation.
 
-![Portfolio Screenshot](public/projects/aKeep.png)
+## 📸 Live Preview
+
+<div align="center">
+  
+  | | |
+  |:---:|:---:|
+  | <img src="public/projects/portfolio-dark-en.png" width="400" alt="Dark Theme - English"><br><b>🌙 Dark Theme (English/LTR)</b> | <img src="public/projects/portfolio-light-fa.png" width="400" alt="Light Theme - Persian"><br><b>☀️ Light Theme (Persian/RTL)</b> |
+  
+  <br>
+  
+  <img src="public/projects/portfolio-mobile-dark.png" width="200" alt="Mobile Dark">
+  <img src="public/projects/portfolio-mobile-light.png" width="200" alt="Mobile Light">
+  
+  *Mobile responsive views - Dark & Light themes*
+  
+</div>
 
 ## ✨ Features
 
@@ -15,15 +30,14 @@ A modern, bilingual (English/Persian) portfolio website showcasing my work as a 
 
 ## 🛠️ Tech Stack
 
-| Category          | Technologies              |
-| ----------------- | ------------------------- |
-| **Core**          | React 19, Vite 7          |
-| **Styling**       | TailwindCSS 4, Custom CSS |
-| **Icons**         | React Icons               |
-| **UI Components** | Base UI                   |
-| **Language**      | JavaScript (ES6+)         |
-| **Build Tool**    | Vite                      |
-| **Code Quality**  | ESLint, Prettier          |
+| Category         | Technologies              |
+| ---------------- | ------------------------- |
+| **Core**         | React 19, Vite 7          |
+| **Styling**      | TailwindCSS 4, Custom CSS |
+| **Icons**        | React Icons               |
+| **Language**     | JavaScript (ES6+)         |
+| **Build Tool**   | Vite                      |
+| **Code Quality** | ESLint, Prettier          |
 
 ## 📁 Project Structure
 
@@ -190,7 +204,6 @@ This project is open source and available under the MIT License.
 
 - **GitHub**: [@Alaleh-Mohseni](https://github.com/Alaleh-Mohseni)
 - **LinkedIn**: [Alaleh Mohseni](https://www.linkedin.com/in/alaleh-mohseni)
-- **Telegram**: [@alaleh_mohseni](https://t.me/alaleh_mohseni)
 - **Email**: alalamohseni@gmail.com
 
 ## 🙏 Acknowledgments
