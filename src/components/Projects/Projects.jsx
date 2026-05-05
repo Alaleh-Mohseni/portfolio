@@ -128,7 +128,7 @@ function Projects() {
           onClick={() => setPreviewImage(null)}
         >
           <button
-            className="fixed top-5 right-5 w-9 h-9 bg-[rgba(255,255,255,0.15)] backdrop-blur-[6px] border border-[rgba(255,255,255,0.2)] rounded-full text-white text-base cursor-pointer transition-all duration-[250ms] ease-in-out flex items-center justify-center z-[10000] hover:rotate-90 hover:bg-[rgba(255,255,255,0.25)] max-md:top-3 max-md:right-3"
+            className={`fixed top-5 ${language === 'fa' ? 'left-5 max-md:left-3' : 'right-5 max-md:right-3'} w-9 h-9 bg-[rgba(255,255,255,0.15)] backdrop-blur-[6px] border border-[rgba(255,255,255,0.2)] rounded-full text-white text-base cursor-pointer transition-all duration-[250ms] ease-in-out flex items-center justify-center z-[10000] hover:rotate-90 hover:bg-[rgba(255,255,255,0.25)] max-md:top-3`}
             onClick={() => setPreviewImage(null)}
           >
             <GrClose />
