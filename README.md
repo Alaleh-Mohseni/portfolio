@@ -8,14 +8,7 @@ A modern, bilingual (English/Persian) portfolio website showcasing my work as a 
   
   | | |
   |:---:|:---:|
-  | <img src="public/projects/portfolio-dark-en.png" width="400" alt="Dark Theme - English"><br><b>🌙 Dark Theme (English/LTR)</b> | <img src="public/projects/portfolio-light-fa.png" width="400" alt="Light Theme - Persian"><br><b>☀️ Light Theme (Persian/RTL)</b> |
-  
-  <br>
-  
-  <img src="public/projects/portfolio-mobile-dark.png" width="200" alt="Mobile Dark">
-  <img src="public/projects/portfolio-mobile-light.png" width="200" alt="Mobile Light">
-  
-  *Mobile responsive views - Dark & Light themes*
+  | <img src="public/projects/portfolio-dark-theme.png" width="400" alt="Dark Theme - English"><br><b>🌙 Dark Theme (English/LTR)</b> | <img src="public/projects/portfolio-light-theme.png" width="400" alt="Light Theme - Persian"><br><b>☀️ Light Theme (Persian/RTL)</b> 
   
 </div>
 
