@@ -7,6 +7,7 @@ const portfolioData = {
             description: "I'm a Frontend Developer with 3+ years of experience building modern, responsive web apps with React. I love using AI tools to move faster, solve problems smarter, and deliver clean, maintainable code. I'm comfortable with Node.js basics and enjoy working with teams to turn ideas into real products.",
             cvButton: "Download CV",
             cvLink: "/resume/AlalehMohseni.pdf",
+            photo: "/profile-photo.png",
             currentWork: {
                 label: "Currently at",
                 company: "Karyar Studio",
@@ -74,7 +75,11 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Node.js", "Ant", "MongoDB", "Docker", "Recharts", "Nodemailer", "Papaparse", "Node-cron"],
                     image: "/projects/aKeep.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 2,
@@ -84,7 +89,11 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Node.js", "MongoDB", "Lodash", "Docker", "Ant", "Nodemailer", "Xlsx", "Recharts", "ClickHouse"],
                     image: "/projects/sampars.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 3,
@@ -94,7 +103,11 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Node.js", "Ant", "MongoDB", "Docker", "Lodash", "Xlsx", "Nodemailer"],
                     image: "/projects/karyar-digital.png",
-                    link: "https://digital.kaaryar.ir/"
+                    links: [
+                        { name: "Web", url: "https://digital.kaaryar.ir/" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 4,
@@ -104,7 +117,11 @@ const portfolioData = {
                     category: ["web"],
                     technologies: ["Next.js", "Node.js", "Typescript", "MongoDB", "Docker", "Tailwindcss", "Framer Motion"],
                     image: "/projects/divar-desktop.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 5,
@@ -114,7 +131,11 @@ const portfolioData = {
                     category: ["dashboard", "mobile"],
                     technologies: ["React", "Node.js", "MongoDB", "Docker", "Ant", "Typescript"],
                     image: "/projects/nexis.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 6,
@@ -124,7 +145,11 @@ const portfolioData = {
                     category: ["web", "uiux"],
                     technologies: ["React", "CSS", "Figma"],
                     image: "/projects/karyar-studio.png",
-                    link: "https://studio.kaaryar.ir/"
+                    links: [
+                        { name: "Web", url: "https://studio.kaaryar.ir/" },
+                        { name: "Figma", url: "https://www.figma.com/design/G3EZLkXHKebWL5v5HLrfBg/Kaaryar-Studio-Landing-Page?node-id=1-17&t=RB3aRYFR58bOoh86-0" },
+                        { name: "GitHub", url: "#" }
+                    ],
                 },
                 {
                     id: 7,
@@ -134,7 +159,11 @@ const portfolioData = {
                     category: ["web"],
                     technologies: ["React", "Sass"],
                     image: "/projects/ta_code.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 8,
@@ -144,7 +173,11 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Node.js", "React Query", "Supabase", "Chart.js", "Framer Motion", "Vitest", "CSS"],
                     image: "/projects/presentation.jpg",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ],
                 },
                 {
                     id: 9,
@@ -154,7 +187,11 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Node.js", "MongoDB", "Docker", "Ant", "Git"],
                     image: "/projects/resume-builder.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/resume-builder" }
+                    ]
                 },
                 {
                     id: 10,
@@ -164,7 +201,11 @@ const portfolioData = {
                     category: ["extension"],
                     technologies: ["Preact", "Node.js", "Tailwindcss", "Google Cloud", "OpenAI", "Git"],
                     image: "/projects/meeting_assistant.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/Meeting-assistant" }
+                    ]
                 },
                 {
                     id: 11,
@@ -174,7 +215,11 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Firebase", "React Query", "Tailwindcss", "Zod", "React Hook Form", "Framer Motion", "Chart.js", "Git"],
                     image: "/projects/cryptocurrency.png",
-                    link: "https://cryptocurrency-dashboardd.netlify.app/"
+                    links: [
+                        { name: "Web", url: "https://cryptocurrency-dashboardd.netlify.app/" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/react-hook-form-yup" }
+                    ]
                 },
                 {
                     id: 12,
@@ -184,7 +229,11 @@ const portfolioData = {
                     category: ["web"],
                     technologies: ["React", "React Query", "Bootstrap", "Git"],
                     image: "/projects/film.png",
-                    link: "https://movie-app-reactjs-three.vercel.app/"
+                    links: [
+                        { name: "Web", url: "https://movie-app-reactjs-three.vercel.app/" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/movie-app-reactjs" }
+                    ]
                 },
                 {
                     id: 13,
@@ -194,7 +243,24 @@ const portfolioData = {
                     category: ["web"],
                     technologies: ["Next.js", "Redux", "Tailwindcss", "Swiper", "Git"],
                     image: "/projects/jewelry.png",
-                    link: "https://accessory-market.netlify.app/"
+                    links: [
+                        { name: "Web", url: "https://accessory-market.netlify.app/" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/nextjs-shopping-cart" }
+                    ]
+                },
+                {
+                    id: 14,
+                    title: "Portfolio Website",
+                    description: "A modern, responsive portfolio website built with React, TailwindCSS, and Vite. Features bilingual support (EN/FA), dark/light theme, smooth scrolling, and dynamic project filtering.",
+                    category: ["web", "uiux"],
+                    technologies: ["React", "TailwindCSS", "Figma"],
+                    image: "/projects/portfolio-dark-theme.png",
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "https://www.figma.com/design/4qXl93w2EIYsk55dHe5uB2/Developer-Portfolio-Design?node-id=0-1&p=f&t=2i9QtnNG6fMNgQrn-0" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/portfolio" }
+                    ]
                 }
             ]
         },
@@ -231,6 +297,7 @@ const portfolioData = {
             description: "من یک توسعه‌دهنده فرانت‌اند با بیش از ۳ سال تجربه در ساخت اپلیکیشن‌های وب مدرن و ریسپانسیو با React هستم. از ابزارهای هوش مصنوعی برای کار سریع‌تر، حل مسائل هوشمندانه‌تر و تحویل کد تمیز و قابل نگهداری استفاده می‌کنم. با اصول Node.js آشنا هستم و از کار تیمی برای تبدیل ایده‌ها به محصولات واقعی لذت می‌برم.",
             cvButton: "دانلود رزومه",
             cvLink: "/resume/آلاله_محسنی.pdf",
+            photo: "/profile-photo.png",
             currentWork: {
                 label: "در حال حاضر در",
                 company: "کاریار استودیو",
@@ -297,7 +364,11 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Node.js", "Ant", "MongoDB", "Docker", "Recharts", "Nodemailer", "Papaparse", "Node-cron"],
                     image: "/projects/aKeep.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 2,
@@ -307,7 +378,11 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Node.js", "MongoDB", "Lodash", "Docker", "Ant", "Nodemailer", "Xlsx", "Recharts", "ClickHouse"],
                     image: "/projects/sampars.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 3,
@@ -317,7 +392,11 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Node.js", "Ant", "MongoDB", "Docker", "Lodash", "Xlsx", "Nodemailer"],
                     image: "/projects/karyar-digital.png",
-                    link: "https://digital.kaaryar.ir/"
+                    links: [
+                        { name: "Web", url: "https://digital.kaaryar.ir/" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 4,
@@ -327,7 +406,11 @@ const portfolioData = {
                     category: ["web"],
                     technologies: ["Next.js", "Node.js", "Typescript", "MongoDB", "Docker", "Tailwindcss", "Framer Motion"],
                     image: "/projects/divar-desktop.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 5,
@@ -337,7 +420,11 @@ const portfolioData = {
                     category: ["dashboard", "mobile"],
                     technologies: ["React", "Node.js", "MongoDB", "Docker", "Ant", "Typescript"],
                     image: "/projects/nexis.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 6,
@@ -347,7 +434,11 @@ const portfolioData = {
                     category: ["web", "uiux"],
                     technologies: ["React", "CSS", "Figma"],
                     image: "/projects/karyar-studio.png",
-                    link: "https://studio.kaaryar.ir/"
+                    links: [
+                        { name: "Web", url: "https://studio.kaaryar.ir/" },
+                        { name: "Figma", url: "https://www.figma.com/design/G3EZLkXHKebWL5v5HLrfBg/Kaaryar-Studio-Landing-Page?node-id=1-17&t=RB3aRYFR58bOoh86-0" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 7,
@@ -357,7 +448,11 @@ const portfolioData = {
                     category: ["web"],
                     technologies: ["React", "Sass"],
                     image: "/projects/ta_code.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 8,
@@ -367,7 +462,11 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Node.js", "React Query", "Supabase", "Chart.js", "Framer Motion", "Vitest", "CSS"],
                     image: "/projects/presentation.jpg",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "#" }
+                    ]
                 },
                 {
                     id: 9,
@@ -377,7 +476,11 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Node.js", "MongoDB", "Docker", "Ant", "Git"],
                     image: "/projects/resume-builder.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/resume-builder" }
+                    ]
                 },
                 {
                     id: 10,
@@ -387,7 +490,11 @@ const portfolioData = {
                     category: ["extension"],
                     technologies: ["Preact", "Node.js", "Tailwindcss", "Google Cloud", "OpenAI", "Git"],
                     image: "/projects/meeting_assistant.png",
-                    link: "#"
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/Meeting-assistant" }
+                    ]
                 },
                 {
                     id: 11,
@@ -397,17 +504,25 @@ const portfolioData = {
                     category: ["dashboard"],
                     technologies: ["React", "Firebase", "React Query", "Tailwindcss", "Zod", "React Hook Form", "Framer Motion", "Chart.js", "Git"],
                     image: "/projects/cryptocurrency.png",
-                    link: "https://cryptocurrency-dashboardd.netlify.app/"
+                    links: [
+                        { name: "Web", url: "https://cryptocurrency-dashboardd.netlify.app/" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/react-hook-form-yup" }
+                    ]
                 },
                 {
                     id: 12,
-                    title: "جعبه فیلم",
+                    title: "وبسایت فیلم",
                     // description: "وب‌سایت فیلم",
                     description: "پلتفرم مرور فیلم با امکان جستجو، فیلتر و مدیریت محتوا، همراه با سیستم احراز هویت و واکشی بهینه داده با React Query.",
                     category: ["web"],
                     technologies: ["React", "React Query", "Bootstrap", "Git"],
                     image: "/projects/film.png",
-                    link: "https://movie-app-reactjs-three.vercel.app/"
+                    links: [
+                        { name: "Web", url: "https://movie-app-reactjs-three.vercel.app/" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/movie-app-reactjs" }
+                    ]
                 },
                 {
                     id: 13,
@@ -417,7 +532,24 @@ const portfolioData = {
                     category: ["web"],
                     technologies: ["Next.js", "Redux", "Tailwindcss", "Swiper", "Git"],
                     image: "/projects/jewelry.png",
-                    link: "https://accessory-market.netlify.app/"
+                    links: [
+                        { name: "Web", url: "https://accessory-market.netlify.app/" },
+                        { name: "Figma", url: "#" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/nextjs-shopping-cart" }
+                    ]
+                },
+                {
+                    id: 14,
+                    title: "وب‌سایت نمونه کارها",
+                    description: "وب‌سایت مدرن و ریسپانسیو نمونه کارها با استفاده از React، TailwindCSS و Vite. دارای پشتیبانی دو زبانه (فارسی/انگلیسی)، تم روشن/تاریک، اسکرول نرم و فیلتر داینامیک پروژه‌ها.",
+                    category: ["web", "uiux"],
+                    technologies: ["React", "TailwindCSS", "Figma"],
+                    image: "/projects/portfolio-dark-theme.png",
+                    links: [
+                        { name: "Web", url: "#" },
+                        { name: "Figma", url: "https://www.figma.com/design/4qXl93w2EIYsk55dHe5uB2/Developer-Portfolio-Design?node-id=0-1p=f&t=2i9QtnNG6fMNgQrn-0" },
+                        { name: "GitHub", url: "https://github.com/Alaleh-Mohseni/portfolio" }
+                    ]
                 }
             ]
         },

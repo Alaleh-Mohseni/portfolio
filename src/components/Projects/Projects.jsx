@@ -5,7 +5,9 @@ import {
   BsArrowUpLeftCircle,
   BsArrowUpRightCircleFill,
   BsArrowUpLeftCircleFill,
+  BsGithub,
 } from 'react-icons/bs'
+import { FaFigma } from 'react-icons/fa'
 import { LanguageContext } from '../../contexts/LanguageContext'
 import portfolioData from '../../data/portfolio-data'
 import Link from '../Link/Link'
@@ -24,6 +26,39 @@ function Projects() {
           project.category.includes(activeCategory)
         )
 
+  // Helper function to get icon based on link name
+  const getLinkIcon = (linkName) => {
+    const nameLower = linkName.toLowerCase()
+    if (nameLower.includes('github')) {
+      return <BsGithub className="text-lg" />
+    }
+    if (nameLower.includes('figma')) {
+      return <FaFigma className="text-lg" />
+    }
+    // Default web icon
+    return language === 'fa' ? (
+      <BsArrowUpLeftCircle className="text-lg" />
+    ) : (
+      <BsArrowUpRightCircle className="text-lg" />
+    )
+  }
+
+  const getLinkIconHover = (linkName) => {
+    const nameLower = linkName.toLowerCase()
+    if (nameLower.includes('github')) {
+      return <BsGithub className="text-lg" />
+    }
+    if (nameLower.includes('figma')) {
+      return <FaFigma className="text-lg" />
+    }
+    // Default web icon (filled)
+    return language === 'fa' ? (
+      <BsArrowUpLeftCircleFill className="text-lg text-[var(--accent)]" />
+    ) : (
+      <BsArrowUpRightCircleFill className="text-lg text-[var(--accent)]" />
+    )
+  }
+
   return (
     <section className="projects" id="projects">
       <div className="mx-auto w-full">
@@ -40,12 +75,12 @@ function Projects() {
               key={category.key}
               onClick={() => setActiveCategory(category.key)}
               className={`h-10 min-w-[120px] md:min-w-[120px] px-5 md:px-5 text-sm md:text-sm font-medium rounded-[10px] bg-transparent cursor-pointer transition-all duration-[250ms] ease-in-out
-  ${
-    activeCategory === category.key
-      ? 'bg-[image:var(--accent-gradient)] text-white border-transparent'
-      : 'text-[var(--foreground)] shadow-[var(--btn-shadow)] hover:shadow-[0_0_15px_rgba(110,78,242,0.35)]'
-  }
-  max-md:min-w-auto max-md:px-3.5 max-md:text-[13px] max-md:h-9`}
+                        ${
+                          activeCategory === category.key
+                            ? 'bg-[image:var(--accent-gradient)] text-white border-transparent'
+                            : 'text-[var(--foreground)] shadow-[var(--btn-shadow)] hover:shadow-[0_0_15px_rgba(110,78,242,0.35)]'
+                        }
+                        max-md:min-w-auto max-md:px-3.5 max-md:text-[13px] max-md:h-9`}
             >
               {category.label}
             </button>
@@ -80,26 +115,27 @@ function Projects() {
               <div className="flex flex-col flex-1">
                 <div className="flex items-center justify-between mb-1">
                   <h4>{project.title}</h4>
-                  {project.link && project.link !== '#' && (
-                    <Link
-                      href={project.link}
-                      variant="none"
-                      onClick={(e) => e.stopPropagation()}
-                      className="text-primary hover:opacity-70 transition-opacity group"
-                    >
-                      {language === 'fa' ? (
-                        <>
-                          <BsArrowUpLeftCircle className="text-xl group-hover:hidden" />
-                          <BsArrowUpLeftCircleFill className="text-xl hidden group-hover:block text-[var(--accent)]" />
-                        </>
-                      ) : (
-                        <>
-                          <BsArrowUpRightCircle className="text-xl group-hover:hidden" />
-                          <BsArrowUpRightCircleFill className="text-xl hidden group-hover:block text-[var(--accent)]" />
-                        </>
-                      )}
-                    </Link>
-                  )}
+                  {/* Project Links */}
+                  <div className="flex items-center gap-2">
+                    {project.links
+                      ?.filter((link) => link.url && link.url !== '#')
+                      .map((link, index) => (
+                        <Link
+                          key={index}
+                          href={link.url}
+                          variant="none"
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-primary hover:opacity-70 transition-opacity group"
+                        >
+                          <span className="group-hover:hidden">
+                            {getLinkIcon(link.name)}
+                          </span>
+                          <span className="hidden group-hover:block">
+                            {getLinkIconHover(link.name)}
+                          </span>
+                        </Link>
+                      ))}
+                  </div>
                 </div>
                 <p className="text-sm mb-4 line-clamp-3">
                   {project.description}

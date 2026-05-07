@@ -3,7 +3,6 @@ import { BsDownload } from 'react-icons/bs'
 import { LanguageContext } from '../../contexts/LanguageContext'
 import portfolioData from '../../data/portfolio-data'
 import Flower from '../../assets/decorate.png'
-import ProfilePhoto from '../../assets/profile-photo.png'
 import SocialLinks from '../SocialLinks/SocialLinks'
 import Link from '../Link/Link'
 import './Hero.css'
@@ -69,7 +68,7 @@ function Hero() {
         <div className="relative">
           <div className="absolute inset-1 bg-[var(--accent)] opacity-10 blur-3xl rounded-full"></div>
           <img
-            src={ProfilePhoto}
+            src={t.photo}
             alt="Alaleh Mohseni"
             className="w-[180px] h-[180px] md:w-[320px] md:h-[320px] object-cover rounded-full border-4 border-[var(--accent)] shadow-2xl relative z-10"
           />
