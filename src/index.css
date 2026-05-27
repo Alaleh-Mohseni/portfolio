@@ -2,6 +2,9 @@
 @import url('./assets/fonts/vazirmatnFontFace.css');
 
 @import 'tailwindcss';
+@source "../src";
+@source "./components";
+@source "./pages";
 
 @layer base {
   :root {

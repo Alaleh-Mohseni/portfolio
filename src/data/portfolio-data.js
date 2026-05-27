@@ -7,7 +7,7 @@ const portfolioData = {
             description: "I'm a Frontend Developer with 3+ years of experience building modern, responsive web apps with React. I love using AI tools to move faster, solve problems smarter, and deliver clean, maintainable code. I'm comfortable with Node.js basics and enjoy working with teams to turn ideas into real products.",
             cvButton: "Download CV",
             cvLink: "/resume/AlalehMohseni.pdf",
-            photo: "/profile-photo.png",
+            photo: "/photo.png",
             currentWork: {
                 label: "Currently at",
                 company: "Karyar Studio",
@@ -115,7 +115,7 @@ const portfolioData = {
                     // description: "Province Guessing Game",
                     description: "An interactive web-based game where users guess Iranian provinces through visual and contextual clues, built with smooth animations and engaging gameplay.",
                     category: ["web"],
-                    technologies: ["Next.js", "Node.js", "Typescript", "MongoDB", "Docker", "Tailwindcss", "Framer Motion"],
+                    technologies: ["React", "Node.js", "Typescript", "MongoDB", "Docker", "Tailwindcss", "Framer Motion"],
                     image: "/projects/divar-desktop.png",
                     links: [
                         { name: "Web", url: "#" },
@@ -297,7 +297,7 @@ const portfolioData = {
             description: "من یک توسعه‌دهنده فرانت‌اند با بیش از ۳ سال تجربه در ساخت اپلیکیشن‌های وب مدرن و ریسپانسیو با React هستم. از ابزارهای هوش مصنوعی برای کار سریع‌تر، حل مسائل هوشمندانه‌تر و تحویل کد تمیز و قابل نگهداری استفاده می‌کنم. با اصول Node.js آشنا هستم و از کار تیمی برای تبدیل ایده‌ها به محصولات واقعی لذت می‌برم.",
             cvButton: "دانلود رزومه",
             cvLink: "/resume/آلاله_محسنی.pdf",
-            photo: "/profile-photo.png",
+            photo: "/photo.png",
             currentWork: {
                 label: "در حال حاضر در",
                 company: "کاریار استودیو",
@@ -404,7 +404,7 @@ const portfolioData = {
                     // description: "بازی حدس استان",
                     description: "یک بازی تعاملی وب‌محور که کاربران باید استان‌های ایران را از روی سرنخ‌های بصری و محتوایی حدس بزنند، همراه با انیمیشن‌های روان.",
                     category: ["web"],
-                    technologies: ["Next.js", "Node.js", "Typescript", "MongoDB", "Docker", "Tailwindcss", "Framer Motion"],
+                    technologies: ["React", "Node.js", "Typescript", "MongoDB", "Docker", "Tailwindcss", "Framer Motion"],
                     image: "/projects/divar-desktop.png",
                     links: [
                         { name: "Web", url: "#" },
