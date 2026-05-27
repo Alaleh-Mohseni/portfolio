@@ -70,7 +70,7 @@ function Hero() {
           <img
             src={t.photo}
             alt="Alaleh Mohseni"
-            className="w-[180px] h-[180px] bg-[var(--background)] md:w-[320px] md:h-[320px] object-cover rounded-full border-4 border-[var(--accent)] shadow-2xl relative z-10"
+            className="w-[180px] h-[180px] bg-[#1f1f24] md:w-[320px] md:h-[320px] object-cover rounded-full border-4 border-[var(--accent)] shadow-2xl relative z-10"
           />
         </div>
       </div>
