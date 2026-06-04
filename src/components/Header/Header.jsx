@@ -79,7 +79,7 @@ function Header() {
 
   return (
     <header
-      className={`header flex flex-col md:flex-row items-center justify-between px-6 transition-all duration-300 ${
+      className={`header flex flex-col-reverse gap-2 md:flex-row items-center justify-between px-6 transition-all duration-300 ${
         isScrolled ? 'py-3 shadow-lg header--scrolled' : 'py-5'
       } ${!isHeaderVisible ? 'header--hidden' : ''}`}
     >
@@ -101,14 +101,14 @@ function Header() {
         </ul>
       </nav>
 
-      <div className="header__controls flex justify-center gap-2">
+      <div className="flex justify-center items-center gap-4">
         <button
           onClick={toggleLanguage}
-          className="header-button flex justify-center gap-2"
+          className="header-button flex justify-center items-center gap-1"
           aria-label="Toggle language"
         >
-          <BsGlobe className="text-xl" />
-          <span className="text-base font-medium uppercase language">
+          <BsGlobe className="text-base md:text-xl" />
+          <span className="text-sm md:text-base font-medium uppercase language">
             {language}
           </span>
         </button>
@@ -119,9 +119,9 @@ function Header() {
           aria-label="Toggle theme"
         >
           {theme === 'dark' ? (
-            <BsSun className="text-xl" />
+            <BsSun className="text-base md:text-xl" />
           ) : (
-            <BsMoon className="text-xl" />
+            <BsMoon className="text-base md:text-xl" />
           )}
         </button>
       </div>

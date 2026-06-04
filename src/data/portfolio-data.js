@@ -49,7 +49,7 @@ const portfolioData = {
                 { name: "Firebase", icon: "/dev/firebase.svg" },
                 { name: "Vitest", icon: "/dev/vitest.svg" },
                 { name: "ClickHouse", icon: "/dev/clickhouse.svg" },
-                { name: "Socket.io", icon: "/dev/socket.svg" },
+                // { name: "Socket.io", icon: "/dev/socket.svg" },
             ]
         },
 
@@ -339,7 +339,7 @@ const portfolioData = {
                 { name: "Firebase", icon: "/dev/firebase.svg" },
                 { name: "Vitest", icon: "/dev/vitest.svg" },
                 { name: "ClickHouse", icon: "/dev/clickhouse.svg" },
-                { name: "Socket.io", icon: "/dev/socket.svg" },
+                // { name: "Socket.io", icon: "/dev/socket.svg" },
             ]
         },
 

@@ -26,6 +26,7 @@
     --card-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
     --img-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
     --btn-shadow: 0 4px 12px rgba(110, 78, 242, 0.25);
+    --image-bg: rgba(110, 78, 242, 0.08);
     --filter-bg: 0;
 
     --h1-font-size: 1.5rem;
@@ -72,6 +73,7 @@
     --btn-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     --filter-bg: 100%;
     --print-bg: #ffffff;
+    --image-bg: rgba(110, 78, 242, 0.15);
   }
 
   html {
@@ -163,21 +165,6 @@
   .section h3 {
     color: var(--foreground);
     font-size: var(--h3-font-size);
-  }
-
-  /* Mobile header controls animation */
-  @media (max-width: 767px) {
-    .header--hidden .header__controls {
-      @apply opacity-0 -translate-y-2 pointer-events-none;
-      max-height: 0;
-      margin-top: 0;
-    }
-
-    .header__controls {
-      @apply transition-all duration-300 ease-in-out opacity-100 translate-y-0;
-      max-height: 48px;
-      margin-top: 1rem;
-    }
   }
 
   /* Button Styling */

@@ -27,7 +27,12 @@ function Hero() {
 
         {/* CV Button */}
         <div className="flex flex-wrap items-center gap-6">
-          <a href={t.cvLink} className="gap-2 px-6 py-4 rounded-2xl cv-button">
+          <a
+            href={t.cvLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gap-2 px-6 py-4 rounded-2xl cv-button"
+          >
             <BsDownload className="text-lg" />
             {t.cvButton}
           </a>

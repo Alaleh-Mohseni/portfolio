@@ -13,7 +13,13 @@ export function LanguageProvider({ children }) {
       'dir',
       language === 'fa' ? 'rtl' : 'ltr'
     )
+
     document.documentElement.setAttribute('lang', language)
+
+    document.title =
+      language === 'fa'
+        ? 'آلاله محسنی - توسعه‌دهنده فرانت‌اند'
+        : 'Alaleh Mohseni - Frontend Developer'
 
     storage.set('language', language)
   }, [language])

@@ -18,6 +18,7 @@ function Projects() {
   const data = portfolioData[language].projects
   const [activeCategory, setActiveCategory] = useState('all')
   const [previewImage, setPreviewImage] = useState(null)
+  const [loaded, setLoaded] = useState(false)
 
   const filteredProjects =
     activeCategory === 'all'
@@ -102,8 +103,14 @@ function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover object-top transition-transform duration-[350ms] ease-in-out group-hover:scale-[1.06]"
+                  loading="lazy"
+                  onLoad={() => setLoaded(true)}
+                  className={`w-full h-full object-cover object-top transition-opacity duration-500 ease-in-out group-hover:scale-[1.06]
+                    ${loaded ? 'opacity-100' : 'opacity-0'}`}
                 />
+                {!loaded && (
+                  <div className="absolute inset-0 bg-[var(--image-bg)] animate-pulse rounded-xl" />
+                )}
                 <div className="absolute inset-0 bg-[rgba(110,78,242,0.15)] flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <span className="text-white text-[13px] font-medium bg-[rgba(0,0,0,0.45)] px-3.5 py-1.5 rounded-[20px] backdrop-blur-[4px]">
                     {language === 'fa' ? 'مشاهده تصویر' : 'Click to preview'}
@@ -137,9 +144,7 @@ function Projects() {
                       ))}
                   </div>
                 </div>
-                <p className="text-sm mb-4 line-clamp-3">
-                  {project.description}
-                </p>
+                <p className="text-sm mb-4">{project.description}</p>
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-1.5">
                   {project.technologies.map((tech, index) => (
@@ -175,6 +180,7 @@ function Projects() {
           >
             <img
               src={previewImage}
+              loading="lazy"
               alt="Preview"
               className="w-full h-full max-w-[90vw] max-h-[90vh] object-contain rounded-[1px] shadow-[0_24px_64px_rgba(0,0,0,0.6)] max-md:max-w-[95vw] max-md:max-h-[95vh]"
             />
