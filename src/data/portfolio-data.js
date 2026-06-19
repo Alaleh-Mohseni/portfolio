@@ -275,14 +275,14 @@ const portfolioData = {
                     position: "Frontend Developer",
                     period: "Oct 2023 - Present",
                     achievements: [
-                        "Improved admin panel performance by implementing Code Splitting, Lazy Loading, and memoization techniques, significantly reducing initial load time and boosting Lighthouse performance scores.",
-                        "Designed and built complex multi-step (wizard-based) forms with advanced validation, dynamic field rendering, and optimized state management for better user experience and scalability.",
-                        "Architected and implemented a lightweight custom internationalization (i18n) solution with seamless RTL/LTR layout switching support.",
-                        "Developed reusable and scalable UI components using React and Ant Design, improving code consistency and reducing duplication across multiple projects.",
-                        "Built analytical dashboards using Recharts with dynamic filtering and real-time data visualization for logistics and performance management systems.",
-                        "Implemented custom API management hooks with caching, request deduplication, and error handling, improving frontend data consistency and reducing unnecessary network calls.",
-                        "Optimized rendering performance by applying debounce/throttle techniques and refining state structure, reducing unnecessary re-renders across complex pages.",
-                        "Collaborated closely with backend and design teams to translate Figma designs into pixel-perfect, responsive, production-ready interfaces."
+                        "Developed and maintained multiple **production-grade dashboards and SaaS platforms**, collaborating closely with backend and design teams to translate Figma designs into **pixel-perfect, responsive interfaces**.",
+                        "Improved admin panel performance by implementing **Code Splitting, Lazy Loading, and memoization** techniques, reducing initial load time by **~35%** and boosting Lighthouse performance scores.",
+                        "Designed and built complex **multi-step (wizard-based) forms** with **advanced validation**, dynamic field rendering, and optimized state management for better user experience and scalability.",
+                        "Architected and implemented a lightweight **custom internationalization (i18n) solution** with seamless **RTL/LTR layout switching** support.",
+                        "Refactored complex components into **reusable, scalable React/Ant Design modules**, improving code consistency and reducing duplication across multiple projects.",
+                        "Built analytical dashboards using **Recharts** with dynamic filtering and **real-time data visualization** for logistics and performance management systems.",
+                        "Collaborated on backend APIs and data modeling using Node.js and MongoDB, and implemented **custom API hooks with caching and request deduplication**, cutting unnecessary network calls by **~40%**.",
+                        "Optimized rendering performance by applying **debounce/throttle techniques** and refining state structure, **reducing unnecessary re-renders** across complex pages."
                     ]
                 }
             ]
@@ -565,13 +565,14 @@ const portfolioData = {
                     position: "توسعه‌دهنده فرانت‌اند",
                     period: "مهر ۱۴۰۲ - اکنون",
                     achievements: [
-                        "بهینه‌سازی عملکرد پنل ادمین با استفاده از Code Splitting، Lazy Loading و تکنیک‌های memoization که منجر به کاهش محسوس زمان بارگذاری اولیه و بهبود امتیاز Lighthouse شد.",
-                        "طراحی و توسعه فرم‌های چندمرحله‌ای (Wizard) با اعتبارسنجی پیشرفته، مدیریت state بهینه و رندر داینامیک فیلدها برای بهبود تجربه کاربری.",
-                        "طراحی و پیاده‌سازی سیستم ترجمه اختصاصی برای پشتیبانی کامل از RTL/LTR.",
-                        "ساخت کامپوننت‌های reusable و مقیاس‌پذیر با React و Ant Design برای افزایش یکپارچگی کد و کاهش تکرار در پروژه‌ها.",
-                        "پیاده‌سازی داشبوردهای تحلیلی با نمودارهای پویا و فیلترهای داینامیک جهت نمایش داده‌های لجستیکی و عملکرد سازمانی.",
-                        "توسعه هوک‌های سفارشی مدیریت API با قابلیت کشینگ و حذف درخواست‌های تکراری برای افزایش پایداری فرانت‌اند.",
-                        "کاهش رندرهای غیرضروری با بهینه‌سازی ساختار state و استفاده از تکنیک‌های debounce و throttle."
+                        "توسعه و نگهداری چندین **داشبورد و پلتفرم SaaS در سطح Production**، با همکاری نزدیک با تیم‌های بک‌اند و طراحی برای تبدیل طرح‌های Figma به **رابط‌های کاربری دقیق و ریسپانسیو**.",
+                        "بهینه‌سازی عملکرد پنل ادمین با استفاده از **Code Splitting، Lazy Loading و تکنیک‌های memoization** که منجر به کاهش حدود **۳۵٪** در زمان بارگذاری اولیه و بهبود امتیاز Lighthouse شد.",
+                        "طراحی و توسعه **فرم‌های چندمرحله‌ای (Wizard)** با **اعتبارسنجی پیشرفته**، مدیریت state بهینه و رندر داینامیک فیلدها برای بهبود تجربه کاربری.",
+                        "طراحی و پیاده‌سازی **سیستم ترجمه اختصاصی** برای پشتیبانی کامل از **RTL/LTR**.",
+                        "بازطراحی (Refactor) کامپوننت‌های پیچیده به **ماژول‌های reusable و مقیاس‌پذیر** با React و Ant Design، برای افزایش یکپارچگی کد و کاهش تکرار در پروژه‌ها.",
+                        "پیاده‌سازی **داشبوردهای تحلیلی** با **نمودارهای پویا و فیلترهای داینامیک** جهت نمایش داده‌های لجستیکی و عملکرد سازمانی.",
+                        "همکاری در طراحی API ها و مدل‌سازی داده با Node.js و MongoDB، و توسعه **هوک‌های سفارشی مدیریت API با قابلیت کشینگ و حذف درخواست‌های تکراری** که حدود **۴۰٪** از تعداد درخواست‌های شبکه را کاهش داد.",
+                        "کاهش **رندرهای غیرضروری** با بهینه‌سازی ساختار state و استفاده از **تکنیک‌های debounce و throttle**."
                     ]
                 }
             ]

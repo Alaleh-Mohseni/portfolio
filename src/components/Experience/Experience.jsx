@@ -2,7 +2,21 @@ import { useContext } from 'react'
 import { LanguageContext } from '../../contexts/LanguageContext'
 import portfolioData from '../../data/portfolio-data'
 import Link from '../Link/Link'
+
 import './Experience.css'
+
+function renderFormattedText(text) {
+  const parts = text.split('**')
+  return parts.map((part, i) =>
+    i % 2 === 1 ? (
+      <strong key={i} className="font-semibold text-[var(--foreground)]">
+        {part}
+      </strong>
+    ) : (
+      part
+    )
+  )
+}
 
 function Experience() {
   const { language } = useContext(LanguageContext)
@@ -62,7 +76,7 @@ function Experience() {
                     <div key={achIndex} className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-[var(--foreground)] mt-2.5 flex-shrink-0"></span>
                       <p className="leading-relaxed flex-1 text-sm md:text-base">
-                        {achievement}
+                        {renderFormattedText(achievement)}
                       </p>
                     </div>
                   ))}
